@@ -1,0 +1,9 @@
+C:\Users\Endeade\Documents\GitHub\AppInstaller\bin\Debug\AppInstaller.exe
+C:\Users\Endeade\Documents\GitHub\AppInstaller\bin\Debug\AppInstaller.pdb
+C:\Users\Endeade\Documents\GitHub\AppInstaller\obj\Debug\AppInstaller.csproj.AssemblyReference.cache
+C:\Users\Endeade\Documents\GitHub\AppInstaller\obj\Debug\AppInstaller.Form1.resources
+C:\Users\Endeade\Documents\GitHub\AppInstaller\obj\Debug\AppInstaller.Properties.Resources.resources
+C:\Users\Endeade\Documents\GitHub\AppInstaller\obj\Debug\AppInstaller.csproj.GenerateResource.cache
+C:\Users\Endeade\Documents\GitHub\AppInstaller\obj\Debug\AppInstaller.csproj.CoreCompileInputs.cache
+C:\Users\Endeade\Documents\GitHub\AppInstaller\obj\Debug\AppInstaller.exe
+C:\Users\Endeade\Documents\GitHub\AppInstaller\obj\Debug\AppInstaller.pdb

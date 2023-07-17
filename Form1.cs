@@ -222,31 +222,15 @@ namespace AppInstaller
             button11.Visible = true;
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private async void button10_Click(object sender, EventArgs e)
         {
-            string uninst = GetEnvironmentVariable("localappdata") + "\\Discord\\Update.exe";
-            button10.Text = "Uninstalling...";
-            var process = Process.Start(uninst, "--uninstall -s");
-            process.WaitForExit();
-            button10.Text = "Uninstalled";
-            wait(5000);
-            button10.Visible = false;
-            button6.Text = "Install";
+            // "%LocalAppData%\Discord\Update.exe" --uninstall -s
+            //Discord uninstall
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string uninst = GetEnvironmentVariable("PROGRAMFILES(X86)") + "\\Microsoft\\Edge\\Application\\";
-            string[] dirs = Directory.GetDirectories(uninst, "*", SearchOption.AllDirectories);
-            string uninstdir = dirs[0];
-            string uninstaller = uninstdir + "setup.exe";
-            button5.Text = "Uninstalling...";
-            var process = Process.Start(uninstaller, "-uninstall -system-level –verbose-logging –force-uninstall");
-            process.WaitForExit();
-            button5.Text = "Uninstalled";
-            wait(5000);
-            button5.Visible = false;
-            button1.Text = "Install";
+            //Edge uninstall
         }
 
         private async void button16_Click(object sender, EventArgs e)
@@ -267,17 +251,65 @@ namespace AppInstaller
             button16.Text = "Update";
             button15.Visible = true;
         }
-
+        //These are for the gaming tab.
+        private async void button17_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\SteamSetup.exe";
+            progressBar1.Visible = true;
+            button17.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe"), downloadpath);
+            button17.Text = "Installing...";
+            var process = Process.Start(downloadpath, "-s");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button17.Text = "Installed";
+            wait(5000);
+            button17.Text = "Update";
+            button18.Visible = true;
+        }
+        private async void button20_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\GOG_Galaxy_2.0.exe";
+            progressBar1.Visible = true;
+            button20.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://webinstallers.gog-statics.com/download/GOG_Galaxy_2.0.exe"), downloadpath);
+            button20.Text = "Installing...";
+            var process = Process.Start(downloadpath, "-s");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button20.Text = "Installed";
+            wait(5000);
+            button20.Text = "Update";
+            button19.Visible = true;
+        }
+        private async void button22_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\EpicGamesLauncherInstaller.msi";
+            progressBar1.Visible = true;
+            button22.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi"), downloadpath);
+            button22.Text = "Installing...";
+            var process = Process.Start(downloadpath, "-s");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button22.Text = "Installed";
+            wait(5000);
+            button22.Text = "Update";
+            button21.Visible = true;
+        }
         private void button11_Click(object sender, EventArgs e)
         {
-            string uninst = GetEnvironmentVariable("appdata") + "\\Telegram Desktop\\unins000.exe";
-            button11.Text = "Uninstalling...";
-            var process = Process.Start(uninst, "/VERYSILENT /NORESTART");
-            process.WaitForExit();
-            button11.Text = "Uninstalled";
-            wait(5000);
-            button11.Visible = false;
-            button12.Text = "Install";
+            // "%AppData%\Telegram Desktop\unins000.exe" /VERYSILENT /NORESTART 
+            //Telegram uninstall
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -307,37 +339,38 @@ namespace AppInstaller
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
-            {
-                this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                tabPage1.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                tabPage2.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                EnableBlur();
-                label1.ForeColor = Color.White;
-                label2.ForeColor = Color.White;
-                label3.ForeColor = Color.White;
-                label4.ForeColor = Color.White;
-                label5.ForeColor = Color.White;
-                label6.ForeColor = Color.White;
-                label7.ForeColor = Color.White;
-                label8.ForeColor = Color.White;
-                label9.ForeColor = Color.White;
-                label10.ForeColor = Color.White;
-                label11.ForeColor = Color.White;
-            } else
-            {
-                Application.Restart();
-                Exit(0);
-            }
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            tabPage1.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            tabPage2.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            EnableBlur();
 
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private async void button24_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\PrismLauncher-Windows-MSVC-Setup-7.1.exe";
+            progressBar1.Visible = true;
+            button24.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://github.com/PrismLauncher/PrismLauncher/releases/download/7.1/PrismLauncher-Windows-MSVC-Setup-7.1.exe"), downloadpath);
+            button24.Text = "Installing...";
+            var process = Process.Start(downloadpath, "-s");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button24.Text = "Installed";
+            wait(5000);
+            button24.Text = "Update";
+            button23.Visible = true;
         }
     }
 }

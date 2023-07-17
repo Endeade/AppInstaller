@@ -12,6 +12,8 @@ using System.Diagnostics;
 using static System.Environment;
 using static System.Uri;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Threading.Tasks;
+using System.Security.AccessControl;
 
 namespace AppInstaller
 {
@@ -46,34 +48,28 @@ namespace AppInstaller
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs c)
+        private async void button1_Click(object sender, EventArgs c)
         {
-            string downloadpath = appinstallerfiles + "\\MSEdgeSetup.msi";
-            button1.Text = "Installing...";
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\Edge.msi";
             progressBar1.Visible = true;
-            using (WebClient wc = new WebClient())
-            {
-                try
-                {
-                    wc.DownloadProgressChanged += wc_DownloadProgressChanged;
-                    wc.DownloadFileAsync(new Uri("https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/e25e63b7-e29e-4c86-bd45-e7d683b9a2bd/MicrosoftEdgeEnterpriseX64.msi"), downloadpath);
-                }
-                catch
-                {
-                    MessageBox.Show("FAIL!");
-                }
-            }
+            button1.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/e25e63b7-e29e-4c86-bd45-e7d683b9a2bd/MicrosoftEdgeEnterpriseX64.msi"), downloadpath);
+            button1.Text = "Installing...";
+            var process = Process.Start(downloadpath);
+            process.WaitForExit();
             progressBar1.Visible = false;
-            Process.Start(downloadpath + " /qb");
             button1.Text = "Installed";
             wait(5000);
             button1.Text = "Install";
         }
-
-        void wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+        
+        private void DownloadProgress(object sender, DownloadProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
-        }
+        } 
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -88,19 +84,42 @@ namespace AppInstaller
             progressBar1.Visible = false;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       
+
+        private async void button2_Click(object sender, EventArgs e)
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             string downloadpath = appinstallerfiles + "\\Chrome.msi";
-            button2.Text = "Installing...";
-            using (var client = new WebClient())
-            {
-                client.DownloadFile("https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BA2AFEE09-00D4-4A6E-BFAB-365F04535F02%7D%26lang%3Den%26browser%3D5%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dtrue%26ap%3Dx64-stable-statsdef_0%26brand%3DGCEA/dl/chrome/install/googlechromestandaloneenterprise64.msi", downloadpath);
-            }
-            Process.Start(downloadpath, "/q");
-            button2.Text = "Installed";
+            progressBar1.Visible = true;
+            button1.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BA2AFEE09-00D4-4A6E-BFAB-365F04535F02%7D%26lang%3Den%26browser%3D5%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dtrue%26ap%3Dx64-stable-statsdef_0%26brand%3DGCEA/dl/chrome/install/googlechromestandaloneenterprise64.msi"), downloadpath);
+            button1.Text = "Installing...";
+            var process = Process.Start(downloadpath);
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button1.Text = "Installed";
             wait(5000);
-            button2.Text = "Install";
-            
+            button1.Text = "Install";
+        }
+
+        private async void button3_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\Firefox.msi";
+            progressBar1.Visible = true;
+            button3.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://download.mozilla.org/?product=firefox-msi-latest-ssl&os=win64&lang=en-US&_gl=1*1r8hyod*_ga*MjAzODg4MzkwNi4xNjg5NTg5MzMx*_ga_MQ7767QQQW*MTY4OTU4OTMzMC4xLjEuMTY4OTU4OTM2OS4wLjAuMA.."), downloadpath);
+            button3.Text = "Installing...";
+            var process = Process.Start(downloadpath);
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button3.Text = "Installed";
+            wait(5000);
+            button3.Text = "Install";
         }
     }
 }

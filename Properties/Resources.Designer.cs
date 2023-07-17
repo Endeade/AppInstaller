@@ -63,19 +63,9 @@ namespace AppInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap brave_software_logo_B77E610153_seeklogo_com {
-            get {
-                object obj = ResourceManager.GetObject("brave-software-logo-B77E610153-seeklogo.com", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Firefox_logo__2019_svg {
             get {
-                object obj = ResourceManager.GetObject("Firefox_logo,_2019.svg", resourceCulture);
+                object obj = ResourceManager.GetObject("Firefox_logo__2019_svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -85,7 +75,7 @@ namespace AppInstaller.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Google_Chrome_icon__February_2022__svg {
             get {
-                object obj = ResourceManager.GetObject("Google_Chrome_icon_(February_2022).svg", resourceCulture);
+                object obj = ResourceManager.GetObject("Google_Chrome_icon__February_2022__svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -105,7 +95,7 @@ namespace AppInstaller.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Microsoft_Edge_logo__2019_ {
             get {
-                object obj = ResourceManager.GetObject("Microsoft_Edge_logo_(2019)", resourceCulture);
+                object obj = ResourceManager.GetObject("Microsoft_Edge_logo__2019_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

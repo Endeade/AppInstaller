@@ -63,9 +63,29 @@ namespace AppInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB {
+            get {
+                object obj = ResourceManager.GetObject("636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap element {
+            get {
+                object obj = ResourceManager.GetObject("element", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Firefox_logo__2019_svg {
             get {
-                object obj = ResourceManager.GetObject("Firefox_logo__2019_svg", resourceCulture);
+                object obj = ResourceManager.GetObject("Firefox_logo,_2019.svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +95,7 @@ namespace AppInstaller.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Google_Chrome_icon__February_2022__svg {
             get {
-                object obj = ResourceManager.GetObject("Google_Chrome_icon__February_2022__svg", resourceCulture);
+                object obj = ResourceManager.GetObject("Google_Chrome_icon_(February_2022).svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +115,27 @@ namespace AppInstaller.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Microsoft_Edge_logo__2019_ {
             get {
-                object obj = ResourceManager.GetObject("Microsoft_Edge_logo__2019_", resourceCulture);
+                object obj = ResourceManager.GetObject("Microsoft_Edge_logo_(2019)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap revoltlogo {
+            get {
+                object obj = ResourceManager.GetObject("revoltlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Telegram_2019_Logo_svg {
+            get {
+                object obj = ResourceManager.GetObject("Telegram_2019_Logo.svg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

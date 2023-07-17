@@ -14,11 +14,42 @@ using static System.Uri;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Threading.Tasks;
 using System.Security.AccessControl;
+using System.Runtime.InteropServices;
+using static AppInstaller.EffectBlur;
+using AutoUpdaterDotNET;
 
 namespace AppInstaller
 {
     public partial class Form1 : Form
     {
+        [DllImport("user32.dll")]
+        internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
+
+        private uint _blurOpacity;
+        public double BlurOpacity
+        {
+            get { return _blurOpacity; }
+            set { _blurOpacity = (uint)value; EnableBlur(); }
+        }
+
+        private uint _blurBackgroundColor = 0x990000;
+
+        internal void EnableBlur()
+        {
+            var accent = new AccentPolicy();
+            accent.AccentState = AccentState.ACCENT_ENABLE_ACRYLICBLURBEHIND;
+            accent.GradientColor = (_blurOpacity << 24) | (_blurBackgroundColor & 0xFFFFFF);
+            var accentStructSize = Marshal.SizeOf(accent);
+            var accentPtr = Marshal.AllocHGlobal(accentStructSize);
+            Marshal.StructureToPtr(accent, accentPtr, false);
+            var data = new WindowCompositionAttributeData();
+            data.Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY;
+            data.SizeOfData = accentStructSize;
+            data.Data = accentPtr;
+            SetWindowCompositionAttribute(this.Handle, ref data);
+            Marshal.FreeHGlobal(accentPtr);
+        }
+
         public void wait(int milliseconds)
         {
             var timer1 = new System.Windows.Forms.Timer();
@@ -63,13 +94,14 @@ namespace AppInstaller
             progressBar1.Visible = false;
             button1.Text = "Installed";
             wait(5000);
-            button1.Text = "Install";
+            button1.Text = "Update";
+            button5.Visible = true;
         }
         
         private void DownloadProgress(object sender, DownloadProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
-        } 
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -77,14 +109,23 @@ namespace AppInstaller
             if (Directory.Exists(appinstallerfiles))
             {
 
-            } else
+            }
+            else
             {
                 Directory.CreateDirectory(appinstallerfiles);
             }
             progressBar1.Visible = false;
+
+            if (checkBox2.Checked)
+            {
+                if (checkBox2.Checked == true)
+                {
+                    AutoUpdater.Start("https://raw.githubusercontent.com/Endeade/endeade.github.io/main/appinstaller/autoupdater.xml");
+                }
+            }
         }
 
-       
+
 
         private async void button2_Click(object sender, EventArgs e)
         {
@@ -101,7 +142,8 @@ namespace AppInstaller
             progressBar1.Visible = false;
             button1.Text = "Installed";
             wait(5000);
-            button1.Text = "Install";
+            button1.Text = "Update";
+            button7.Visible = true;
         }
 
         private async void button3_Click(object sender, EventArgs e)
@@ -119,7 +161,8 @@ namespace AppInstaller
             progressBar1.Visible = false;
             button3.Text = "Installed";
             wait(5000);
-            button3.Text = "Install";
+            button3.Text = "Update";
+            button8.Visible = true;
         }
 
         private async void button4_Click(object sender, EventArgs e)
@@ -137,7 +180,124 @@ namespace AppInstaller
             progressBar1.Visible = false;
             button4.Text = "Installed";
             wait(5000);
-            button4.Text = "Install";
+            button4.Text = "Update";
+            button9.Visible = true;
+        }
+
+        private async void button6_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\Discord.exe";
+            progressBar1.Visible = true;
+            button6.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://dl.discordapp.net/distro/app/stable/win/x86/1.0.9015/DiscordSetup.exe"), downloadpath);
+            button6.Text = "Installing...";
+            var process = Process.Start(downloadpath, "-s");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button6.Text = "Installed";
+            wait(5000);
+            button6.Text = "Update";
+        }
+
+
+        private async void button12_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\Telegram.exe";
+            progressBar1.Visible = true;
+            button12.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://updates.tdesktop.com/tx64/tsetup-x64.4.8.3.exe"), downloadpath);
+            button12.Text = "Installing...";
+            var process = Process.Start(downloadpath, "-s");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button12.Text = "Installed";
+            wait(5000);
+            button12.Text = "Update";
+            button11.Visible = true;
+        }
+
+        private async void button10_Click(object sender, EventArgs e)
+        {
+            // "%LocalAppData%\Discord\Update.exe" --uninstall -s
+            //Discord uninstall
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //Edge uninstall
+        }
+
+        private async void button16_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\Element.exe";
+            progressBar1.Visible = true;
+            button16.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://packages.riot.im/desktop/install/win32/ia32/Element%20Setup.exe"), downloadpath);
+            button16.Text = "Installing...";
+            var process = Process.Start(downloadpath, "-s");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button16.Text = "Installed";
+            wait(5000);
+            button16.Text = "Update";
+            button15.Visible = true;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            // "%AppData%\Telegram Desktop\unins000.exe" /VERYSILENT /NORESTART 
+            //Telegram uninstall
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            //Revolt uninstall
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //Chrome uninstall
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            //Firefox uninstall
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            //Vivaldi uninstall
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            //Element uninstall
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            tabPage1.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            tabPage2.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            EnableBlur();
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

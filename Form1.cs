@@ -121,5 +121,23 @@ namespace AppInstaller
             wait(5000);
             button3.Text = "Install";
         }
+
+        private async void button4_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\Vivaldi.exe";
+            progressBar1.Visible = true;
+            button4.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://downloads.vivaldi.com/stable/Vivaldi.6.1.3035.111.x64.exe"), downloadpath);
+            button4.Text = "Installing...";
+            var process = Process.Start(downloadpath, "--vivaldi-silent --do-not-launch-chrome --system-level");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button4.Text = "Installed";
+            wait(5000);
+            button4.Text = "Install";
+        }
     }
 }

@@ -117,7 +117,7 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(111, 363);
+            this.progressBar1.Location = new System.Drawing.Point(121, 550);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(724, 23);
             this.progressBar1.TabIndex = 15;
@@ -143,9 +143,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(418, 156);
+            this.button3.Location = new System.Drawing.Point(423, 156);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
+            this.button3.Size = new System.Drawing.Size(95, 23);
             this.button3.TabIndex = 12;
             this.button3.Text = "Install";
             this.button3.UseVisualStyleBackColor = true;

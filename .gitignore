@@ -32,3 +32,5 @@ obj/Debug/AppInstaller.Properties.Resources.resources
 .vs/AppInstaller/FileContentIndex/f03eaa4d-6751-4db5-a401-a996a46472d9.vsidx
 .vs/AppInstaller/v17/.suo
 .vs/AppInstaller/FileContentIndex/b3b00a07-39fa-484b-b669-7d976afd085b.vsidx
+*.vsidx
+.vs/AppInstaller/v17/.suo

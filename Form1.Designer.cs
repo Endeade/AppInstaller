@@ -532,10 +532,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Variable Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(333, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(311, 20);
+            this.label9.Size = new System.Drawing.Size(339, 18);
             this.label9.TabIndex = 4;
             this.label9.Text = "NOTE: Settings are WIP and mostly broken.";
             // 
@@ -557,9 +557,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(32, 36);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(123, 17);
+            this.checkBox1.Size = new System.Drawing.Size(177, 17);
             this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Enable Acrylic Mode";
+            this.checkBox1.Text = "Enable Acrylic Mode (BROKEN)";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -573,6 +573,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AppInstaller";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.TabControl.ResumeLayout(false);

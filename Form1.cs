@@ -222,15 +222,31 @@ namespace AppInstaller
             button11.Visible = true;
         }
 
-        private async void button10_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
-            // "%LocalAppData%\Discord\Update.exe" --uninstall -s
-            //Discord uninstall
+            string uninst = GetEnvironmentVariable("localappdata") + "\\Discord\\Update.exe";
+            button10.Text = "Uninstalling...";
+            var process = Process.Start(uninst, "--uninstall -s");
+            process.WaitForExit();
+            button10.Text = "Uninstalled";
+            wait(5000);
+            button10.Visible = false;
+            button6.Text = "Install";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            //Edge uninstall
+            string uninst = GetEnvironmentVariable("PROGRAMFILES(X86)") + "\\Microsoft\\Edge\\Application\\";
+            string[] dirs = Directory.GetDirectories(uninst, "*", SearchOption.AllDirectories);
+            string uninstdir = dirs[0];
+            string uninstaller = uninstdir + "setup.exe";
+            button5.Text = "Uninstalling...";
+            var process = Process.Start(uninstaller, "-uninstall -system-level –verbose-logging –force-uninstall");
+            process.WaitForExit();
+            button5.Text = "Uninstalled";
+            wait(5000);
+            button5.Visible = false;
+            button1.Text = "Install";
         }
 
         private async void button16_Click(object sender, EventArgs e)
@@ -254,8 +270,14 @@ namespace AppInstaller
 
         private void button11_Click(object sender, EventArgs e)
         {
-            // "%AppData%\Telegram Desktop\unins000.exe" /VERYSILENT /NORESTART 
-            //Telegram uninstall
+            string uninst = GetEnvironmentVariable("appdata") + "\\Telegram Desktop\\unins000.exe";
+            button11.Text = "Uninstalling...";
+            var process = Process.Start(uninst, "/VERYSILENT /NORESTART");
+            process.WaitForExit();
+            button11.Text = "Uninstalled";
+            wait(5000);
+            button11.Visible = false;
+            button12.Text = "Install";
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -285,13 +307,31 @@ namespace AppInstaller
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-            Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-            Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-            tabPage1.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-            tabPage2.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-            TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-            EnableBlur();
+            if (checkBox1.Checked)
+            {
+                this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                tabPage1.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                tabPage2.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                EnableBlur();
+                label1.ForeColor = Color.White;
+                label2.ForeColor = Color.White;
+                label3.ForeColor = Color.White;
+                label4.ForeColor = Color.White;
+                label5.ForeColor = Color.White;
+                label6.ForeColor = Color.White;
+                label7.ForeColor = Color.White;
+                label8.ForeColor = Color.White;
+                label9.ForeColor = Color.White;
+                label10.ForeColor = Color.White;
+                label11.ForeColor = Color.White;
+            } else
+            {
+                Application.Restart();
+                Exit(0);
+            }
 
         }
 

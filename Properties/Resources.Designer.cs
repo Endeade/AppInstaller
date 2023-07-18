@@ -73,9 +73,29 @@ namespace AppInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap android_icon_192x192 {
+            get {
+                object obj = ResourceManager.GetObject("android-icon-192x192", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap element {
             get {
                 object obj = ResourceManager.GetObject("element", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Epic_games_store_logo {
+            get {
+                object obj = ResourceManager.GetObject("Epic_games_store_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +143,29 @@ namespace AppInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap org_prismlauncher_PrismLauncher {
+            get {
+                object obj = ResourceManager.GetObject("org.prismlauncher.PrismLauncher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap revoltlogo {
             get {
                 object obj = ResourceManager.GetObject("revoltlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Steam_icon_logo1 {
+            get {
+                object obj = ResourceManager.GetObject("Steam_icon_logo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

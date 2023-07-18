@@ -89,7 +89,7 @@ namespace AppInstaller
             client.DownloadProgressChanged += DownloadProgress;
             await client.DownloadFileTaskAsync(new Uri("https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/e25e63b7-e29e-4c86-bd45-e7d683b9a2bd/MicrosoftEdgeEnterpriseX64.msi"), downloadpath);
             button1.Text = "Installing...";
-            var process = Process.Start(downloadpath);
+            var process = Process.Start(downloadpath, "/qn");
             process.WaitForExit();
             progressBar1.Visible = false;
             button1.Text = "Installed";
@@ -137,7 +137,7 @@ namespace AppInstaller
             client.DownloadProgressChanged += DownloadProgress;
             await client.DownloadFileTaskAsync(new Uri("https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BA2AFEE09-00D4-4A6E-BFAB-365F04535F02%7D%26lang%3Den%26browser%3D5%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dtrue%26ap%3Dx64-stable-statsdef_0%26brand%3DGCEA/dl/chrome/install/googlechromestandaloneenterprise64.msi"), downloadpath);
             button1.Text = "Installing...";
-            var process = Process.Start(downloadpath);
+            var process = Process.Start(downloadpath,"/qn");
             process.WaitForExit();
             progressBar1.Visible = false;
             button1.Text = "Installed";
@@ -156,7 +156,7 @@ namespace AppInstaller
             client.DownloadProgressChanged += DownloadProgress;
             await client.DownloadFileTaskAsync(new Uri("https://download.mozilla.org/?product=firefox-msi-latest-ssl&os=win64&lang=en-US&_gl=1*1r8hyod*_ga*MjAzODg4MzkwNi4xNjg5NTg5MzMx*_ga_MQ7767QQQW*MTY4OTU4OTMzMC4xLjEuMTY4OTU4OTM2OS4wLjAuMA.."), downloadpath);
             button3.Text = "Installing...";
-            var process = Process.Start(downloadpath);
+            var process = Process.Start(downloadpath, "/qn");
             process.WaitForExit();
             progressBar1.Visible = false;
             button3.Text = "Installed";
@@ -266,7 +266,7 @@ namespace AppInstaller
             wait(5000);
             button16.Text = "Update";
             button15.Visible = true;
-        }
+        }   
 
         private void button11_Click(object sender, EventArgs e)
         {
@@ -278,6 +278,26 @@ namespace AppInstaller
             wait(5000);
             button11.Visible = false;
             button12.Text = "Install";
+        }
+
+        private async void button14_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\Revolt.exe";
+            progressBar1.Visible = true;
+            button14.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://objects.githubusercontent.com/github-production-release-asset-2e65be/391639107/426175ce-7e09-4c83-b41c-7c1bfe205dfe?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230717%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230717T181612Z&X-Amz-Expires=300&X-Amz-Signature=f0202f58689a2838a838f71c9e5792370db31dcf1ef5fcabbaf9ef1543b2614b&X-Amz-SignedHeaders=host&actor_id=68105821&key_id=0&repo_id=391639107&response-content-disposition=attachment%3B%20filename%3DRevolt-Setup-1.0.6.exe&response-content-type=application%2Foctet-stream"), downloadpath);
+            button14.Text = "Installing...";
+            var process = Process.Start(downloadpath, "-s");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button14.Text = "Installed";
+            wait(5000);
+            button14.Text = "Update";
+            button13.Visible = true;
+
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -312,8 +332,8 @@ namespace AppInstaller
                 this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
                 Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
                 Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                tabPage1.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                tabPage2.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                Browsers.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                ChatApps.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
                 TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
                 EnableBlur();
                 label1.ForeColor = Color.White;
@@ -327,7 +347,14 @@ namespace AppInstaller
                 label9.ForeColor = Color.White;
                 label10.ForeColor = Color.White;
                 label11.ForeColor = Color.White;
-            } else
+                label12.ForeColor = Color.White;
+                label13.ForeColor = Color.White;
+                label14.ForeColor = Color.White;
+                label15.ForeColor = Color.White;
+                checkBox1.ForeColor = Color.White;
+                checkBox2.ForeColor = Color.White;
+            }
+            else
             {
                 Application.Restart();
                 Exit(0);
@@ -338,6 +365,111 @@ namespace AppInstaller
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private async void button24_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\SteamSetup.exe";
+            progressBar1.Visible = true;
+            button24.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe"), downloadpath);
+            button24.Text = "Installing...";
+            var process = Process.Start(downloadpath, "/S");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button24.Text = "Installed";
+            wait(5000);
+            button24.Text = "Update";
+            button23.Visible = true;
+
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            // only works on x64 systems, needs fix
+            string uninst = GetEnvironmentVariable("ProgramFiles(x86)") + "\\Steam\\uninstall.exe";  
+            button23.Text = "Uninstalling...";
+            var process = Process.Start(uninst, "/S");
+            process.WaitForExit();
+            button23.Text = "Uninstalled";
+            wait(5000);
+            button23.Visible = false;
+            button21.Text = "Install";
+        }
+
+        private async void button22_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\GOGGalaxy.exe";
+            progressBar1.Visible = true;
+            button22.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://webinstallers.gog-statics.com/download/GOG_Galaxy_2.0.exe"), downloadpath);
+            button22.Text = "Installing...";
+            var process = Process.Start(downloadpath, "/S");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button22.Text = "Installed";
+            wait(5000);
+            button22.Text = "Update";
+            button21.Visible = true;
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            // GOG Galaxy uninstall
+        }
+
+        private async void button20_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\EpicGamesLauncher.msi";
+            progressBar1.Visible = true;
+            button20.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncherInstaller.msi"), downloadpath);
+            button20.Text = "Installing...";
+            var process = Process.Start(downloadpath, "/qn");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button20.Text = "Installed";
+            wait(5000);
+            button20.Text = "Update";
+            button19.Visible = true;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            // Epic Games uninstaller
+        }
+
+        private async void button18_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\PrismLauncher.exe";
+            progressBar1.Visible = true;
+            button22.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://github.com/PrismLauncher/PrismLauncher/releases/download/7.1/PrismLauncher-Windows-MSVC-Setup-7.1.exe"), downloadpath);
+            button22.Text = "Installing...";
+            var process = Process.Start(downloadpath, "/qn");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button22.Text = "Installed";
+            wait(5000);
+            button22.Text = "Update";
+            button21.Visible = true;
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            // Prism Launcher uninstaller
         }
     }
 }

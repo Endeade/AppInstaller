@@ -156,6 +156,18 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\org.prismlauncher.PrismLauncher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Epic_games_store_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android-icon-192x192.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Steam_icon_logo1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Web.WebView2.1.0.1823.32\build\Microsoft.Web.WebView2.targets" Condition="Exists('packages\Microsoft.Web.WebView2.1.0.1823.32\build\Microsoft.Web.WebView2.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

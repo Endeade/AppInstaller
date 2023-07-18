@@ -44,6 +44,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ChatApps = new System.Windows.Forms.TabPage();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
@@ -57,54 +61,50 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.Gaming = new System.Windows.Forms.TabPage();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.button19 = new System.Windows.Forms.Button();
+            this.button20 = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.button23 = new System.Windows.Forms.Button();
+            this.button24 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.Utilities = new System.Windows.Forms.TabPage();
             this.Settings = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.label15 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.TabControl.SuspendLayout();
             this.Browsers.SuspendLayout();
-            this.ChatApps.SuspendLayout();
-            this.Gaming.SuspendLayout();
-            this.Settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ChatApps.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.Gaming.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            this.Settings.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -134,10 +134,10 @@
             this.TabControl.Controls.Add(this.Gaming);
             this.TabControl.Controls.Add(this.Utilities);
             this.TabControl.Controls.Add(this.Settings);
-            this.TabControl.Location = new System.Drawing.Point(13, 61);
+            this.TabControl.Location = new System.Drawing.Point(12, 61);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
-            this.TabControl.Size = new System.Drawing.Size(959, 619);
+            this.TabControl.Size = new System.Drawing.Size(960, 619);
             this.TabControl.TabIndex = 0;
             // 
             // Browsers
@@ -162,7 +162,7 @@
             this.Browsers.Location = new System.Drawing.Point(4, 22);
             this.Browsers.Name = "Browsers";
             this.Browsers.Padding = new System.Windows.Forms.Padding(3);
-            this.Browsers.Size = new System.Drawing.Size(951, 593);
+            this.Browsers.Size = new System.Drawing.Size(952, 593);
             this.Browsers.TabIndex = 0;
             this.Browsers.Text = "Browsers";
             this.Browsers.UseVisualStyleBackColor = true;
@@ -290,6 +290,46 @@
             this.label3.Size = new System.Drawing.Size(44, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Edge";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::AppInstaller.Properties.Resources.image;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(763, 31);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::AppInstaller.Properties.Resources.Firefox_logo__2019_svg;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(575, 31);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(95, 92);
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::AppInstaller.Properties.Resources.Google_Chrome_icon__February_2022__svg;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(317, 31);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::AppInstaller.Properties.Resources.Microsoft_Edge_logo__2019_;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(91, 31);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // ChatApps
             // 
@@ -442,6 +482,46 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Discord";
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImage = global::AppInstaller.Properties.Resources.element;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox8.Location = new System.Drawing.Point(775, 31);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox8.TabIndex = 26;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackgroundImage = global::AppInstaller.Properties.Resources.revoltlogo;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox7.Location = new System.Drawing.Point(575, 31);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox7.TabIndex = 22;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::AppInstaller.Properties.Resources.Telegram_2019_Logo_svg;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox5.Location = new System.Drawing.Point(306, 31);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox5.TabIndex = 18;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackgroundImage = global::AppInstaller.Properties.Resources._636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox6.Location = new System.Drawing.Point(94, 31);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox6.TabIndex = 11;
+            this.pictureBox6.TabStop = false;
+            // 
             // Gaming
             // 
             this.Gaming.Controls.Add(this.button17);
@@ -467,6 +547,170 @@
             this.Gaming.TabIndex = 4;
             this.Gaming.Text = "Gaming";
             this.Gaming.UseVisualStyleBackColor = true;
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(776, 194);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(100, 23);
+            this.button17.TabIndex = 45;
+            this.button17.Text = " ";
+            this.button17.UseVisualStyleBackColor = true;
+            this.button17.Visible = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(776, 165);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(100, 23);
+            this.button18.TabIndex = 44;
+            this.button18.Text = "Install";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(772, 132);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(118, 21);
+            this.label12.TabIndex = 43;
+            this.label12.Text = "Prism Launcher";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = global::AppInstaller.Properties.Resources.org_prismlauncher_PrismLauncher;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox9.Location = new System.Drawing.Point(776, 37);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox9.TabIndex = 42;
+            this.pictureBox9.TabStop = false;
+            // 
+            // button19
+            // 
+            this.button19.Location = new System.Drawing.Point(576, 194);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(100, 23);
+            this.button19.TabIndex = 41;
+            this.button19.Text = "Uninstall";
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Visible = false;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            // 
+            // button20
+            // 
+            this.button20.Location = new System.Drawing.Point(576, 165);
+            this.button20.Name = "button20";
+            this.button20.Size = new System.Drawing.Size(100, 23);
+            this.button20.TabIndex = 40;
+            this.button20.Text = "Install";
+            this.button20.UseVisualStyleBackColor = true;
+            this.button20.Click += new System.EventHandler(this.button20_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(551, 132);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(158, 21);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "Epic Games Launcher";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImage = global::AppInstaller.Properties.Resources.Epic_games_store_logo;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox10.Location = new System.Drawing.Point(576, 37);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox10.TabIndex = 38;
+            this.pictureBox10.TabStop = false;
+            // 
+            // button21
+            // 
+            this.button21.Location = new System.Drawing.Point(307, 194);
+            this.button21.Name = "button21";
+            this.button21.Size = new System.Drawing.Size(100, 23);
+            this.button21.TabIndex = 37;
+            this.button21.Text = "Uninstall";
+            this.button21.UseVisualStyleBackColor = true;
+            this.button21.Visible = false;
+            this.button21.Click += new System.EventHandler(this.button21_Click);
+            // 
+            // button22
+            // 
+            this.button22.Location = new System.Drawing.Point(307, 165);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(100, 23);
+            this.button22.TabIndex = 36;
+            this.button22.Text = "Install";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(313, 132);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 21);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "GOG Galaxy";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackgroundImage = global::AppInstaller.Properties.Resources.android_icon_192x192;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox11.Location = new System.Drawing.Point(307, 37);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox11.TabIndex = 34;
+            this.pictureBox11.TabStop = false;
+            // 
+            // button23
+            // 
+            this.button23.Location = new System.Drawing.Point(95, 194);
+            this.button23.Name = "button23";
+            this.button23.Size = new System.Drawing.Size(100, 23);
+            this.button23.TabIndex = 33;
+            this.button23.Text = "Uninstall";
+            this.button23.UseVisualStyleBackColor = true;
+            this.button23.Visible = false;
+            this.button23.Click += new System.EventHandler(this.button23_Click);
+            // 
+            // button24
+            // 
+            this.button24.Location = new System.Drawing.Point(95, 165);
+            this.button24.Name = "button24";
+            this.button24.Size = new System.Drawing.Size(100, 23);
+            this.button24.TabIndex = 32;
+            this.button24.Text = "Install";
+            this.button24.UseVisualStyleBackColor = true;
+            this.button24.Click += new System.EventHandler(this.button24_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(118, 132);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(53, 21);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Steam";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackgroundImage = global::AppInstaller.Properties.Resources.Steam_icon_logo1;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox12.Location = new System.Drawing.Point(95, 37);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(100, 92);
+            this.pictureBox12.TabIndex = 30;
+            this.pictureBox12.TabStop = false;
             // 
             // Utilities
             // 
@@ -519,9 +763,9 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(32, 36);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(177, 17);
+            this.checkBox1.Size = new System.Drawing.Size(123, 17);
             this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "Enable Acrylic Mode (BROKEN)";
+            this.checkBox1.Text = "Enable Acrylic Mode";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
@@ -531,250 +775,6 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(724, 23);
             this.progressBar1.TabIndex = 15;
-            // 
-            // button17
-            // 
-            this.button17.Location = new System.Drawing.Point(776, 194);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(100, 23);
-            this.button17.TabIndex = 45;
-            this.button17.Text = "Uninstall";
-            this.button17.UseVisualStyleBackColor = true;
-            this.button17.Visible = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(776, 165);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(100, 23);
-            this.button18.TabIndex = 44;
-            this.button18.Text = "Install";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(772, 132);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(118, 21);
-            this.label12.TabIndex = 43;
-            this.label12.Text = "Prism Launcher";
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(576, 194);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(100, 23);
-            this.button19.TabIndex = 41;
-            this.button19.Text = "Uninstall";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Visible = false;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
-            // 
-            // button20
-            // 
-            this.button20.Location = new System.Drawing.Point(576, 165);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(100, 23);
-            this.button20.TabIndex = 40;
-            this.button20.Text = "Install";
-            this.button20.UseVisualStyleBackColor = true;
-            this.button20.Click += new System.EventHandler(this.button20_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(551, 132);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(158, 21);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "Epic Games Launcher";
-            // 
-            // button21
-            // 
-            this.button21.Location = new System.Drawing.Point(307, 194);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(100, 23);
-            this.button21.TabIndex = 37;
-            this.button21.Text = "Uninstall";
-            this.button21.UseVisualStyleBackColor = true;
-            this.button21.Visible = false;
-            this.button21.Click += new System.EventHandler(this.button21_Click);
-            // 
-            // button22
-            // 
-            this.button22.Location = new System.Drawing.Point(307, 165);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(100, 23);
-            this.button22.TabIndex = 36;
-            this.button22.Text = "Install";
-            this.button22.UseVisualStyleBackColor = true;
-            this.button22.Click += new System.EventHandler(this.button22_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(313, 132);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(94, 21);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "GOG Galaxy";
-            // 
-            // button23
-            // 
-            this.button23.Location = new System.Drawing.Point(95, 194);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(100, 23);
-            this.button23.TabIndex = 33;
-            this.button23.Text = "Uninstall";
-            this.button23.UseVisualStyleBackColor = true;
-            this.button23.Visible = false;
-            this.button23.Click += new System.EventHandler(this.button23_Click);
-            // 
-            // button24
-            // 
-            this.button24.Location = new System.Drawing.Point(95, 165);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(100, 23);
-            this.button24.TabIndex = 32;
-            this.button24.Text = "Install";
-            this.button24.UseVisualStyleBackColor = true;
-            this.button24.Click += new System.EventHandler(this.button24_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(118, 132);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(53, 21);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Steam";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::AppInstaller.Properties.Resources.image;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(763, 31);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::AppInstaller.Properties.Resources.Firefox_logo__2019_svg;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(575, 31);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(95, 92);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::AppInstaller.Properties.Resources.Google_Chrome_icon__February_2022__svg;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(317, 31);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::AppInstaller.Properties.Resources.Microsoft_Edge_logo__2019_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(91, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImage = global::AppInstaller.Properties.Resources.element;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox8.Location = new System.Drawing.Point(775, 31);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox8.TabIndex = 26;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackgroundImage = global::AppInstaller.Properties.Resources.revoltlogo;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox7.Location = new System.Drawing.Point(575, 31);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox7.TabIndex = 22;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::AppInstaller.Properties.Resources.Telegram_2019_Logo_svg;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox5.Location = new System.Drawing.Point(306, 31);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox5.TabIndex = 18;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackgroundImage = global::AppInstaller.Properties.Resources._636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox6.Location = new System.Drawing.Point(94, 31);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox6.TabIndex = 11;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackgroundImage = global::AppInstaller.Properties.Resources.org_prismlauncher_PrismLauncher;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox9.Location = new System.Drawing.Point(776, 37);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox9.TabIndex = 42;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImage = global::AppInstaller.Properties.Resources.Epic_games_store_logo;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox10.Location = new System.Drawing.Point(576, 37);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox10.TabIndex = 38;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackgroundImage = global::AppInstaller.Properties.Resources.android_icon_192x192;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox11.Location = new System.Drawing.Point(307, 37);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox11.TabIndex = 34;
-            this.pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackgroundImage = global::AppInstaller.Properties.Resources.Steam_icon_logo1;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox12.Location = new System.Drawing.Point(95, 37);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(100, 92);
-            this.pictureBox12.TabIndex = 30;
-            this.pictureBox12.TabStop = false;
             // 
             // Form1
             // 
@@ -793,24 +793,24 @@
             this.TabControl.ResumeLayout(false);
             this.Browsers.ResumeLayout(false);
             this.Browsers.PerformLayout();
-            this.ChatApps.ResumeLayout(false);
-            this.ChatApps.PerformLayout();
-            this.Gaming.ResumeLayout(false);
-            this.Gaming.PerformLayout();
-            this.Settings.ResumeLayout(false);
-            this.Settings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ChatApps.ResumeLayout(false);
+            this.ChatApps.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.Gaming.ResumeLayout(false);
+            this.Gaming.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            this.Settings.ResumeLayout(false);
+            this.Settings.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

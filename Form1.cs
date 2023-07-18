@@ -288,7 +288,7 @@ namespace AppInstaller
             button14.Text = "Downloading...";
             WebClient client = new WebClient();
             client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://objects.githubusercontent.com/github-production-release-asset-2e65be/391639107/426175ce-7e09-4c83-b41c-7c1bfe205dfe?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230717%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230717T181612Z&X-Amz-Expires=300&X-Amz-Signature=f0202f58689a2838a838f71c9e5792370db31dcf1ef5fcabbaf9ef1543b2614b&X-Amz-SignedHeaders=host&actor_id=68105821&key_id=0&repo_id=391639107&response-content-disposition=attachment%3B%20filename%3DRevolt-Setup-1.0.6.exe&response-content-type=application%2Foctet-stream"), downloadpath);
+            await client.DownloadFileTaskAsync(new Uri("https://github.com/revoltchat/desktop/releases/download/v1.0.6/Revolt-Setup-1.0.6.exe"), downloadpath);
             button14.Text = "Installing...";
             var process = Process.Start(downloadpath, "-s");
             process.WaitForExit();
@@ -329,30 +329,43 @@ namespace AppInstaller
         {
             if (checkBox1.Checked)
             {
-                this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                Browsers.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                ChatApps.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                EnableBlur();
-                label1.ForeColor = Color.White;
-                label2.ForeColor = Color.White;
-                label3.ForeColor = Color.White;
-                label4.ForeColor = Color.White;
-                label5.ForeColor = Color.White;
-                label6.ForeColor = Color.White;
-                label7.ForeColor = Color.White;
-                label8.ForeColor = Color.White;
-                label9.ForeColor = Color.White;
-                label10.ForeColor = Color.White;
-                label11.ForeColor = Color.White;
-                label12.ForeColor = Color.White;
-                label13.ForeColor = Color.White;
-                label14.ForeColor = Color.White;
-                label15.ForeColor = Color.White;
-                checkBox1.ForeColor = Color.White;
-                checkBox2.ForeColor = Color.White;
+                string message = "Acrylic Mode is an experimental feature. Are you sure you want to enable it?";
+                string title = "AppInstaller - Experimental Feature";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                    Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                    Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                    Browsers.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                    ChatApps.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                    TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                    Gaming.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                    EnableBlur();
+                    label1.ForeColor = Color.White;
+                    label2.ForeColor = Color.White;
+                    label3.ForeColor = Color.White;
+                    label4.ForeColor = Color.White;
+                    label5.ForeColor = Color.White;
+                    label6.ForeColor = Color.White;
+                    label7.ForeColor = Color.White;
+                    label8.ForeColor = Color.White;
+                    label9.ForeColor = Color.White;
+                    label10.ForeColor = Color.White;
+                    label11.ForeColor = Color.White;
+                    label12.ForeColor = Color.White;
+                    label13.ForeColor = Color.White;
+                    label14.ForeColor = Color.White;
+                    label15.ForeColor = Color.White;
+                    checkBox1.ForeColor = Color.White;
+                    checkBox2.ForeColor = Color.White;
+                }
+                else
+                {
+                    checkBox1.Checked = false;
+                }
+
             }
             else
             {

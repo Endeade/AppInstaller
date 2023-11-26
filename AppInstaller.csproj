@@ -24,6 +24,14 @@
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
+    <FileVersion>2.0.0-alpha</FileVersion>
+    <AssemblyVersion>2.0.0-alpha</AssemblyVersion>
+    <Version>2.0.0-alpha</Version>
+    <Company></Company>
+    <Description>A GUI application to assist setting up a new Windows installation with your choice of apps.</Description>
+    <Copyright>Copyright (C) Endeade, 2023.</Copyright>
+    <Title>AppInstaller</Title>
+    <Authors>Endeade</Authors>
   </PropertyGroup>
   <ItemGroup>
     <None Include="Resources\Google_Chrome_icon_%28February_2022%29.svg.png" />

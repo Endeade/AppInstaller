@@ -17,6 +17,7 @@ using System.Security.AccessControl;
 using System.Runtime.InteropServices;
 using static AppInstaller.EffectBlur;
 using AutoUpdaterDotNET;
+using Microsoft.Win32;
 
 namespace AppInstaller
 {
@@ -79,6 +80,19 @@ namespace AppInstaller
             InitializeComponent();
         }
 
+        private async void Form1_Closing(object sender, CancelEventArgs e)
+        {
+            RegistryKey appinstsetting = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\\AppInstallerSettings");
+            if (appinstsetting != null)
+            {
+                if (checkBox1.Checked == true)
+                {
+                    appinstsetting.SetValue("", 1);
+                }
+            }
+
+        }
+
         private async void button1_Click(object sender, EventArgs c)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
@@ -97,7 +111,7 @@ namespace AppInstaller
             button1.Text = "Update";
             button5.Visible = true;
         }
-        
+
         private void DownloadProgress(object sender, DownloadProgressChangedEventArgs e)
         {
             progressBar1.Value = e.ProgressPercentage;
@@ -138,7 +152,7 @@ namespace AppInstaller
             client.DownloadProgressChanged += DownloadProgress;
             await client.DownloadFileTaskAsync(new Uri("https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BA2AFEE09-00D4-4A6E-BFAB-365F04535F02%7D%26lang%3Den%26browser%3D5%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dtrue%26ap%3Dx64-stable-statsdef_0%26brand%3DGCEA/dl/chrome/install/googlechromestandaloneenterprise64.msi"), downloadpath);
             button1.Text = "Installing...";
-            var process = Process.Start(downloadpath,"/qn");
+            var process = Process.Start(downloadpath, "/qn");
             process.WaitForExit();
             progressBar1.Visible = false;
             button1.Text = "Installed";
@@ -267,7 +281,7 @@ namespace AppInstaller
             wait(5000);
             button16.Text = "Update";
             button15.Visible = true;
-        }   
+        }
 
         private void button11_Click(object sender, EventArgs e)
         {
@@ -404,7 +418,7 @@ namespace AppInstaller
         private void button23_Click(object sender, EventArgs e)
         {
             // only works on x64 systems, needs fix
-            string uninst = GetEnvironmentVariable("ProgramFiles(x86)") + "\\Steam\\uninstall.exe";  
+            string uninst = GetEnvironmentVariable("ProgramFiles(x86)") + "\\Steam\\uninstall.exe";
             button23.Text = "Uninstalling...";
             var process = Process.Start(uninst, "/S");
             process.WaitForExit();
@@ -485,5 +499,6 @@ namespace AppInstaller
         {
             // Prism Launcher uninstaller
         }
+
     }
 }

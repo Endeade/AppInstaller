@@ -1,4 +1,7 @@
-﻿namespace AppInstaller
+﻿using System;
+using System.Windows.Forms;
+
+namespace AppInstaller
 {
     partial class Form1
     {
@@ -88,14 +91,13 @@
             pictureBox12 = new System.Windows.Forms.PictureBox();
             Utilities = new System.Windows.Forms.TabPage();
             Settings = new System.Windows.Forms.TabPage();
-            label9 = new System.Windows.Forms.Label();
+            label22 = new System.Windows.Forms.Label();
+            label21 = new System.Windows.Forms.Label();
             checkBox2 = new System.Windows.Forms.CheckBox();
+            label9 = new System.Windows.Forms.Label();
             checkBox1 = new System.Windows.Forms.CheckBox();
             progressBar1 = new System.Windows.Forms.ProgressBar();
             label16 = new System.Windows.Forms.Label();
-            checkBox3 = new System.Windows.Forms.CheckBox();
-            label21 = new System.Windows.Forms.Label();
-            label22 = new System.Windows.Forms.Label();
             TabControl.SuspendLayout();
             Browsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -833,9 +835,8 @@
             // 
             Settings.Controls.Add(label22);
             Settings.Controls.Add(label21);
-            Settings.Controls.Add(checkBox3);
-            Settings.Controls.Add(label9);
             Settings.Controls.Add(checkBox2);
+            Settings.Controls.Add(label9);
             Settings.Controls.Add(checkBox1);
             Settings.Location = new System.Drawing.Point(4, 24);
             Settings.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -845,6 +846,40 @@
             Settings.TabIndex = 3;
             Settings.Text = "Settings";
             Settings.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            label22.AutoSize = true;
+            label22.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label22.Location = new System.Drawing.Point(765, 60);
+            label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label22.Name = "label22";
+            label22.Size = new System.Drawing.Size(152, 20);
+            label22.TabIndex = 7;
+            label22.Text = "Appearance settings";
+            // 
+            // label21
+            // 
+            label21.AutoSize = true;
+            label21.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label21.Location = new System.Drawing.Point(147, 60);
+            label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            label21.Name = "label21";
+            label21.Size = new System.Drawing.Size(155, 20);
+            label21.TabIndex = 6;
+            label21.Text = "AppInstaller settings";
+            // 
+            // checkBox2
+            // 
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new System.Drawing.Point(780, 94);
+            checkBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new System.Drawing.Size(122, 19);
+            checkBox2.TabIndex = 5;
+            checkBox2.Text = "Enable Dark Mode";
+            checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.CheckedChanged += checkBox3_CheckedChanged;
             // 
             // label9
             // 
@@ -857,31 +892,19 @@
             label9.TabIndex = 4;
             label9.Text = "NOTE: Settings are WIP and mostly broken.";
             // 
-            // checkBox2
-            // 
-            checkBox2.AutoSize = true;
-            checkBox2.Checked = true;
-            checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            checkBox2.Location = new System.Drawing.Point(165, 94);
-            checkBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new System.Drawing.Size(122, 19);
-            checkBox2.TabIndex = 1;
-            checkBox2.Text = "Check for updates";
-            checkBox2.UseVisualStyleBackColor = true;
-            checkBox2.CheckedChanged += checkBox2_CheckedChanged;
-            // 
             // checkBox1
             // 
             checkBox1.AutoSize = true;
-            checkBox1.Location = new System.Drawing.Point(780, 119);
+            checkBox1.Checked = true;
+            checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            checkBox1.Location = new System.Drawing.Point(165, 94);
             checkBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             checkBox1.Name = "checkBox1";
-            checkBox1.Size = new System.Drawing.Size(134, 19);
-            checkBox1.TabIndex = 0;
-            checkBox1.Text = "Enable Acrylic Mode";
+            checkBox1.Size = new System.Drawing.Size(122, 19);
+            checkBox1.TabIndex = 1;
+            checkBox1.Text = "Check for updates";
             checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            checkBox1.CheckedChanged += checkBox2_CheckedChanged;
             // 
             // progressBar1
             // 
@@ -902,39 +925,6 @@
             label16.TabIndex = 16;
             label16.Text = "Version v2.0";
             // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new System.Drawing.Point(780, 94);
-            checkBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new System.Drawing.Size(122, 19);
-            checkBox3.TabIndex = 5;
-            checkBox3.Text = "Enable Dark Mode";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label21.Location = new System.Drawing.Point(147, 60);
-            label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label21.Name = "label21";
-            label21.Size = new System.Drawing.Size(155, 20);
-            label21.TabIndex = 6;
-            label21.Text = "AppInstaller settings";
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label22.Location = new System.Drawing.Point(765, 60);
-            label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            label22.Name = "label22";
-            label22.Size = new System.Drawing.Size(152, 20);
-            label22.TabIndex = 7;
-            label22.Text = "Appearance settings";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -951,6 +941,7 @@
             StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             Text = "AppInstaller";
             Load += Form1_Load;
+            FormClosed += Form1_Closed;
             TabControl.ResumeLayout(false);
             Browsers.ResumeLayout(false);
             Browsers.PerformLayout();
@@ -975,6 +966,8 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
+        
 
         #endregion
 
@@ -1011,7 +1004,6 @@
         private System.Windows.Forms.TabPage Utilities;
         private System.Windows.Forms.TabPage Settings;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
@@ -1045,7 +1037,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
 

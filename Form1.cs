@@ -15,7 +15,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Threading.Tasks;
 using System.Security.AccessControl;
 using System.Runtime.InteropServices;
-using static AppInstaller.EffectBlur;
 using AutoUpdaterDotNET;
 using Microsoft.Win32;
 
@@ -23,33 +22,6 @@ namespace AppInstaller
 {
     public partial class Form1 : Form
     {
-        [DllImport("user32.dll")]
-        internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
-
-        private uint _blurOpacity;
-        public double BlurOpacity
-        {
-            get { return _blurOpacity; }
-            set { _blurOpacity = (uint)value; EnableBlur(); }
-        }
-
-        private uint _blurBackgroundColor = 0x990000;
-
-        internal void EnableBlur()
-        {
-            var accent = new AccentPolicy();
-            accent.AccentState = AccentState.ACCENT_ENABLE_ACRYLICBLURBEHIND;
-            accent.GradientColor = (_blurOpacity << 24) | (_blurBackgroundColor & 0xFFFFFF);
-            var accentStructSize = Marshal.SizeOf(accent);
-            var accentPtr = Marshal.AllocHGlobal(accentStructSize);
-            Marshal.StructureToPtr(accent, accentPtr, false);
-            var data = new WindowCompositionAttributeData();
-            data.Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY;
-            data.SizeOfData = accentStructSize;
-            data.Data = accentPtr;
-            SetWindowCompositionAttribute(this.Handle, ref data);
-            Marshal.FreeHGlobal(accentPtr);
-        }
 
         public void wait(int milliseconds)
         {
@@ -79,15 +51,28 @@ namespace AppInstaller
         {
             InitializeComponent();
         }
-
-        private async void Form1_Closing(object sender, CancelEventArgs e)
+        RegistryKey appinstsetting = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\\AppInstallerSettings");
+        private void Form1_Closed(object sender, FormClosedEventArgs e)
         {
-            RegistryKey appinstsetting = Registry.CurrentUser.CreateSubKey(@"SOFTWARE\\AppInstallerSettings");
+
             if (appinstsetting != null)
             {
                 if (checkBox1.Checked == true)
                 {
-                    appinstsetting.SetValue("", 1);
+                    appinstsetting.SetValue("AutoUpdate", 1);
+                }
+                else
+                {
+                    appinstsetting.SetValue("AutoUpdate", 0);
+                }
+
+                if (checkBox2.Checked == true)
+                {
+                    appinstsetting.SetValue("DarkMode", 1);
+                }
+                else
+                {
+                    appinstsetting.SetValue("DarkMode", 0);
                 }
             }
 
@@ -130,13 +115,78 @@ namespace AppInstaller
             }
             progressBar1.Visible = false;
 
-            if (checkBox2.Checked)
+
+            if (appinstsetting != null)
             {
-                if (checkBox2.Checked == true)
+                if (appinstsetting.GetValue("AutoUpdate") != null)
                 {
-                    AutoUpdater.Start("https://raw.githubusercontent.com/Endeade/endeade.github.io/main/appinstaller/autoupdater.xml");
+                    int AutoUpdate = int.Parse(appinstsetting.GetValue("AutoUpdate").ToString());
+                    if (AutoUpdate == 1)
+                    {
+                        AutoUpdater.Start("https://raw.githubusercontent.com/Endeade/endeade.github.io/main/appinstaller/autoupdater.xml");
+                    }
+                    else
+                    {
+
+                    }
+                } else
+                {
 
                 }
+
+                if (appinstsetting.GetValue("DarkMode") != null)
+                {
+                    int DarkMode = int.Parse(appinstsetting.GetValue("DarkMode").ToString());
+
+                    if (DarkMode == 1)
+                    {
+                        Browsers.BackColor = Color.Black;
+                        Browsers.ForeColor = Color.White;
+                        ChatApps.BackColor = Color.Black;
+                        ChatApps.ForeColor = Color.White;
+                        Gaming.BackColor = Color.Black;
+                        Gaming.ForeColor = Color.White;
+                        Utilities.BackColor = Color.Black;
+                        Utilities.ForeColor = Color.White;
+                        Settings.BackColor = Color.Black;
+                        Settings.ForeColor = Color.White;
+                        this.BackColor = Color.Black;
+                        this.ForeColor = Color.White;
+                        button1.ForeColor = Color.Black;
+                        button2.ForeColor = Color.Black;
+                        button3.ForeColor = Color.Black;
+                        button4.ForeColor = Color.Black;
+                        button5.ForeColor = Color.Black;
+                        button6.ForeColor = Color.Black;
+                        button7.ForeColor = Color.Black;
+                        button8.ForeColor = Color.Black;
+                        button9.ForeColor = Color.Black;
+                        button10.ForeColor = Color.Black;
+                        button11.ForeColor = Color.Black;
+                        button12.ForeColor = Color.Black;
+                        button13.ForeColor = Color.Black;
+                        button14.ForeColor = Color.Black;
+                        button15.ForeColor = Color.Black;
+                        button16.ForeColor = Color.Black;
+                        button17.ForeColor = Color.Black;
+                        button18.ForeColor = Color.Black;
+                        button19.ForeColor = Color.Black;
+                        button20.ForeColor = Color.Black;
+                        button21.ForeColor = Color.Black;
+                        button22.ForeColor = Color.Black;
+                        button23.ForeColor = Color.Black;
+                        button24.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+
+                    }
+                } else
+                {
+
+                }
+
+                
             }
         }
 
@@ -340,56 +390,6 @@ namespace AppInstaller
             //Element uninstall
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            if (checkBox1.Checked)
-            {
-                string message = "Acrylic Mode is an experimental feature. Are you sure you want to enable it?";
-                string title = "AppInstaller - Experimental Feature";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(message, title, buttons, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes)
-                {
-                    this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                    Settings.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                    Utilities.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                    Browsers.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                    ChatApps.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                    TabControl.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                    Gaming.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
-                    EnableBlur();
-                    label1.ForeColor = Color.White;
-                    label2.ForeColor = Color.White;
-                    label3.ForeColor = Color.White;
-                    label4.ForeColor = Color.White;
-                    label5.ForeColor = Color.White;
-                    label6.ForeColor = Color.White;
-                    label7.ForeColor = Color.White;
-                    label8.ForeColor = Color.White;
-                    label9.ForeColor = Color.White;
-                    label10.ForeColor = Color.White;
-                    label11.ForeColor = Color.White;
-                    label12.ForeColor = Color.White;
-                    label13.ForeColor = Color.White;
-                    label14.ForeColor = Color.White;
-                    label15.ForeColor = Color.White;
-                    checkBox1.ForeColor = Color.White;
-                    checkBox2.ForeColor = Color.White;
-                }
-                else
-                {
-                    checkBox1.Checked = false;
-                }
-
-            }
-            else
-            {
-                Application.Restart();
-                Exit(0);
-            }
-
-        }
-
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -500,5 +500,85 @@ namespace AppInstaller
             // Prism Launcher uninstaller
         }
 
+        public void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                Browsers.BackColor = Color.Black;
+                Browsers.ForeColor = Color.White;
+                ChatApps.BackColor = Color.Black;
+                ChatApps.ForeColor = Color.White;
+                Gaming.BackColor = Color.Black;
+                Gaming.ForeColor = Color.White;
+                Utilities.BackColor = Color.Black;
+                Utilities.ForeColor = Color.White;
+                Settings.BackColor = Color.Black;
+                Settings.ForeColor = Color.White;
+                this.BackColor = Color.Black;
+                this.ForeColor = Color.White;
+                button1.ForeColor = Color.Black;
+                button2.ForeColor = Color.Black;
+                button3.ForeColor = Color.Black;
+                button4.ForeColor = Color.Black;
+                button5.ForeColor = Color.Black;
+                button6.ForeColor = Color.Black;
+                button7.ForeColor = Color.Black;
+                button8.ForeColor = Color.Black;
+                button9.ForeColor = Color.Black;
+                button10.ForeColor = Color.Black;
+                button11.ForeColor = Color.Black;
+                button12.ForeColor = Color.Black;
+                button13.ForeColor = Color.Black;
+                button14.ForeColor = Color.Black;
+                button15.ForeColor = Color.Black;
+                button16.ForeColor = Color.Black;
+                button17.ForeColor = Color.Black;
+                button18.ForeColor = Color.Black;
+                button19.ForeColor = Color.Black;
+                button20.ForeColor = Color.Black;
+                button21.ForeColor = Color.Black;
+                button22.ForeColor = Color.Black;
+                button23.ForeColor = Color.Black;
+                button24.ForeColor = Color.Black;
+            } else
+            {
+                Browsers.BackColor = Color.White;
+                Browsers.ForeColor = Color.Black;
+                ChatApps.BackColor = Color.White;
+                ChatApps.ForeColor = Color.Black;
+                Gaming.BackColor = Color.White;
+                Gaming.ForeColor = Color.Black;
+                Utilities.BackColor = Color.White;
+                Utilities.ForeColor = Color.Black;
+                Settings.BackColor = Color.White;
+                Settings.ForeColor = Color.Black;
+                this.BackColor = Color.White;
+                this.ForeColor = Color.Black;
+                button1.ForeColor = Color.Black;
+                button2.ForeColor = Color.Black;
+                button3.ForeColor = Color.Black;
+                button4.ForeColor = Color.Black;
+                button5.ForeColor = Color.Black;
+                button6.ForeColor = Color.Black;
+                button7.ForeColor = Color.Black;
+                button8.ForeColor = Color.Black;
+                button9.ForeColor = Color.Black;
+                button10.ForeColor = Color.Black;
+                button11.ForeColor = Color.Black;
+                button12.ForeColor = Color.Black;
+                button13.ForeColor = Color.Black;
+                button14.ForeColor = Color.Black;
+                button15.ForeColor = Color.Black;
+                button16.ForeColor = Color.Black;
+                button17.ForeColor = Color.Black;
+                button18.ForeColor = Color.Black;
+                button19.ForeColor = Color.Black;
+                button20.ForeColor = Color.Black;
+                button21.ForeColor = Color.Black;
+                button22.ForeColor = Color.Black;
+                button23.ForeColor = Color.Black;
+                button24.ForeColor = Color.Black;
+            }
+        }
     }
 }

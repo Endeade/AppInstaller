@@ -121,6 +121,7 @@ namespace AppInstaller
                 if (checkBox2.Checked == true)
                 {
                     AutoUpdater.Start("https://raw.githubusercontent.com/Endeade/endeade.github.io/main/appinstaller/autoupdater.xml");
+
                 }
             }
         }

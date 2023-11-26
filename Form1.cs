@@ -124,10 +124,11 @@ namespace AppInstaller
                     if (AutoUpdate == 1)
                     {
                         AutoUpdater.Start("https://raw.githubusercontent.com/Endeade/endeade.github.io/main/appinstaller/autoupdater.xml");
+                        checkBox1.Checked = true;
                     }
                     else
                     {
-
+                        checkBox1.Checked = false;
                     }
                 } else
                 {
@@ -176,10 +177,11 @@ namespace AppInstaller
                         button22.ForeColor = Color.Black;
                         button23.ForeColor = Color.Black;
                         button24.ForeColor = Color.Black;
+                        checkBox2.Checked = true;
                     }
                     else
                     {
-
+                        checkBox2.Checked = false;
                     }
                 } else
                 {

@@ -35,6 +35,9 @@ namespace AppInstaller
             label2 = new Label();
             TabControl = new TabControl();
             Browsers = new TabPage();
+            label20 = new Label();
+            label19 = new Label();
+            label18 = new Label();
             label17 = new Label();
             button9 = new Button();
             button8 = new Button();
@@ -53,6 +56,10 @@ namespace AppInstaller
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             ChatApps = new TabPage();
+            label26 = new Label();
+            label25 = new Label();
+            label24 = new Label();
+            label23 = new Label();
             button15 = new Button();
             button16 = new Button();
             label11 = new Label();
@@ -70,6 +77,10 @@ namespace AppInstaller
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             Gaming = new TabPage();
+            label30 = new Label();
+            label29 = new Label();
+            label28 = new Label();
+            label27 = new Label();
             button17 = new Button();
             button18 = new Button();
             label12 = new Label();
@@ -95,17 +106,7 @@ namespace AppInstaller
             checkBox1 = new CheckBox();
             progressBar1 = new ProgressBar();
             label16 = new Label();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
-            label23 = new Label();
-            label24 = new Label();
-            label25 = new Label();
-            label26 = new Label();
-            label27 = new Label();
-            label28 = new Label();
-            label29 = new Label();
-            label30 = new Label();
+            label31 = new Label();
             TabControl.SuspendLayout();
             Browsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -192,6 +193,36 @@ namespace AppInstaller
             Browsers.TabIndex = 0;
             Browsers.Text = "Browsers";
             Browsers.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new System.Drawing.Point(147, 404);
+            label20.Margin = new Padding(4, 0, 4, 0);
+            label20.Name = "label20";
+            label20.Size = new System.Drawing.Size(380, 26);
+            label20.TabIndex = 23;
+            label20.Text = "Vivaldi is a Chromium-based browser developed by Vivaldi Technologies.\r\nThey claim to feature privacy features and it is their main point.";
+            // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new System.Drawing.Point(146, 283);
+            label19.Margin = new Padding(4, 0, 4, 0);
+            label19.Name = "label19";
+            label19.Size = new System.Drawing.Size(325, 52);
+            label19.TabIndex = 22;
+            label19.Text = "Firefox is a browser developed by Mozilla. It uses a completely\r\ndifferent design and style.\r\nImporting and exporting data from the browser is possible\r\nthrough Mozilla Accounts.";
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Location = new System.Drawing.Point(146, 170);
+            label18.Margin = new Padding(4, 0, 4, 0);
+            label18.Name = "label18";
+            label18.Size = new System.Drawing.Size(364, 26);
+            label18.TabIndex = 21;
+            label18.Text = "Google Chrome is Google's browser with a lot of features revolving\r\naround Google Search Engine, Google Accounts and a lot more stuff.\r\n";
             // 
             // label17
             // 
@@ -415,6 +446,46 @@ namespace AppInstaller
             ChatApps.Text = "Chat apps";
             ChatApps.UseVisualStyleBackColor = true;
             // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new System.Drawing.Point(149, 394);
+            label26.Margin = new Padding(4, 0, 4, 0);
+            label26.Name = "label26";
+            label26.Size = new System.Drawing.Size(167, 13);
+            label26.TabIndex = 33;
+            label26.Text = "ion even know what this shit is";
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.Location = new System.Drawing.Point(149, 277);
+            label25.Margin = new Padding(4, 0, 4, 0);
+            label25.Name = "label25";
+            label25.Size = new System.Drawing.Size(202, 13);
+            label25.TabIndex = 32;
+            label25.Text = "Revolt is a chat app similar to Discord.";
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.Location = new System.Drawing.Point(149, 170);
+            label24.Margin = new Padding(4, 0, 4, 0);
+            label24.Name = "label24";
+            label24.Size = new System.Drawing.Size(366, 13);
+            label24.TabIndex = 31;
+            label24.Text = "Telegram is a privacy focused chat app similar to Viber and WhatsApp.";
+            // 
+            // label23
+            // 
+            label23.AutoSize = true;
+            label23.Location = new System.Drawing.Point(151, 55);
+            label23.Margin = new Padding(4, 0, 4, 0);
+            label23.Name = "label23";
+            label23.Size = new System.Drawing.Size(307, 13);
+            label23.TabIndex = 30;
+            label23.Text = "Discord is a chat platform based and focused on \"gamers\".\r\n";
+            // 
             // button15
             // 
             button15.Location = new System.Drawing.Point(271, 455);
@@ -442,7 +513,7 @@ namespace AppInstaller
             // 
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label11.Location = new System.Drawing.Point(144, 375);
+            label11.Location = new System.Drawing.Point(147, 375);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(69, 21);
@@ -476,7 +547,7 @@ namespace AppInstaller
             // 
             label10.AutoSize = true;
             label10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label10.Location = new System.Drawing.Point(149, 258);
+            label10.Location = new System.Drawing.Point(147, 258);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(57, 21);
@@ -544,7 +615,7 @@ namespace AppInstaller
             // 
             label8.AutoSize = true;
             label8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label8.Location = new System.Drawing.Point(147, 36);
+            label8.Location = new System.Drawing.Point(149, 36);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(66, 21);
@@ -626,9 +697,49 @@ namespace AppInstaller
             Gaming.Text = "Gaming";
             Gaming.UseVisualStyleBackColor = true;
             // 
+            // label30
+            // 
+            label30.AutoSize = true;
+            label30.Location = new System.Drawing.Point(147, 395);
+            label30.Margin = new Padding(4, 0, 4, 0);
+            label30.Name = "label30";
+            label30.Size = new System.Drawing.Size(453, 30);
+            label30.TabIndex = 49;
+            label30.Text = "Prism Launcher is a fork of MultiMC which adds a lot of features over regular MMC5.\r\nIt supports logging in with MS accounts.";
+            // 
+            // label29
+            // 
+            label29.AutoSize = true;
+            label29.Location = new System.Drawing.Point(147, 283);
+            label29.Margin = new Padding(4, 0, 4, 0);
+            label29.Name = "label29";
+            label29.Size = new System.Drawing.Size(409, 30);
+            label29.TabIndex = 48;
+            label29.Text = "Epic Games Launcher is Epic Games' game launcher mostly used for Fortnite\r\nand Rocket League.";
+            // 
+            // label28
+            // 
+            label28.AutoSize = true;
+            label28.Location = new System.Drawing.Point(147, 169);
+            label28.Margin = new Padding(4, 0, 4, 0);
+            label28.Name = "label28";
+            label28.Size = new System.Drawing.Size(398, 30);
+            label28.TabIndex = 47;
+            label28.Text = "GOG Galaxy is an app that allows you to purchase, get, download and play\r\ngames from GOG.";
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new System.Drawing.Point(147, 57);
+            label27.Margin = new Padding(4, 0, 4, 0);
+            label27.Name = "label27";
+            label27.Size = new System.Drawing.Size(308, 15);
+            label27.TabIndex = 46;
+            label27.Text = "Steam is Valve's proprietary game launcher and manager.\r\n";
+            // 
             // button17
             // 
-            button17.Location = new System.Drawing.Point(269, 439);
+            button17.Location = new System.Drawing.Point(272, 453);
             button17.Margin = new Padding(4, 3, 4, 3);
             button17.Name = "button17";
             button17.Size = new System.Drawing.Size(117, 27);
@@ -640,7 +751,7 @@ namespace AppInstaller
             // 
             // button18
             // 
-            button18.Location = new System.Drawing.Point(144, 439);
+            button18.Location = new System.Drawing.Point(147, 453);
             button18.Margin = new Padding(4, 3, 4, 3);
             button18.Name = "button18";
             button18.Size = new System.Drawing.Size(117, 27);
@@ -653,7 +764,7 @@ namespace AppInstaller
             // 
             label12.AutoSize = true;
             label12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label12.Location = new System.Drawing.Point(143, 360);
+            label12.Location = new System.Drawing.Point(146, 374);
             label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(120, 21);
@@ -664,7 +775,7 @@ namespace AppInstaller
             // 
             pictureBox9.BackgroundImage = Properties.Resources.org_prismlauncher_PrismLauncher;
             pictureBox9.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox9.Location = new System.Drawing.Point(19, 360);
+            pictureBox9.Location = new System.Drawing.Point(22, 374);
             pictureBox9.Margin = new Padding(4, 3, 4, 3);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new System.Drawing.Size(117, 106);
@@ -673,7 +784,7 @@ namespace AppInstaller
             // 
             // button19
             // 
-            button19.Location = new System.Drawing.Point(269, 327);
+            button19.Location = new System.Drawing.Point(272, 341);
             button19.Margin = new Padding(4, 3, 4, 3);
             button19.Name = "button19";
             button19.Size = new System.Drawing.Size(117, 27);
@@ -685,7 +796,7 @@ namespace AppInstaller
             // 
             // button20
             // 
-            button20.Location = new System.Drawing.Point(144, 327);
+            button20.Location = new System.Drawing.Point(147, 341);
             button20.Margin = new Padding(4, 3, 4, 3);
             button20.Name = "button20";
             button20.Size = new System.Drawing.Size(117, 27);
@@ -698,7 +809,7 @@ namespace AppInstaller
             // 
             label13.AutoSize = true;
             label13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label13.Location = new System.Drawing.Point(144, 248);
+            label13.Location = new System.Drawing.Point(147, 262);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
             label13.Size = new System.Drawing.Size(163, 21);
@@ -709,7 +820,7 @@ namespace AppInstaller
             // 
             pictureBox10.BackgroundImage = Properties.Resources.Epic_games_store_logo;
             pictureBox10.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox10.Location = new System.Drawing.Point(19, 248);
+            pictureBox10.Location = new System.Drawing.Point(22, 262);
             pictureBox10.Margin = new Padding(4, 3, 4, 3);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new System.Drawing.Size(117, 106);
@@ -718,7 +829,7 @@ namespace AppInstaller
             // 
             // button21
             // 
-            button21.Location = new System.Drawing.Point(269, 213);
+            button21.Location = new System.Drawing.Point(272, 227);
             button21.Margin = new Padding(4, 3, 4, 3);
             button21.Name = "button21";
             button21.Size = new System.Drawing.Size(117, 27);
@@ -730,7 +841,7 @@ namespace AppInstaller
             // 
             // button22
             // 
-            button22.Location = new System.Drawing.Point(144, 213);
+            button22.Location = new System.Drawing.Point(147, 227);
             button22.Margin = new Padding(4, 3, 4, 3);
             button22.Name = "button22";
             button22.Size = new System.Drawing.Size(117, 27);
@@ -743,7 +854,7 @@ namespace AppInstaller
             // 
             label14.AutoSize = true;
             label14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label14.Location = new System.Drawing.Point(144, 134);
+            label14.Location = new System.Drawing.Point(147, 148);
             label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
             label14.Size = new System.Drawing.Size(95, 21);
@@ -754,7 +865,7 @@ namespace AppInstaller
             // 
             pictureBox11.BackgroundImage = Properties.Resources.android_icon_192x192;
             pictureBox11.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox11.Location = new System.Drawing.Point(19, 134);
+            pictureBox11.Location = new System.Drawing.Point(22, 148);
             pictureBox11.Margin = new Padding(4, 3, 4, 3);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new System.Drawing.Size(117, 106);
@@ -763,7 +874,7 @@ namespace AppInstaller
             // 
             // button23
             // 
-            button23.Location = new System.Drawing.Point(269, 101);
+            button23.Location = new System.Drawing.Point(272, 115);
             button23.Margin = new Padding(4, 3, 4, 3);
             button23.Name = "button23";
             button23.Size = new System.Drawing.Size(117, 27);
@@ -775,7 +886,7 @@ namespace AppInstaller
             // 
             // button24
             // 
-            button24.Location = new System.Drawing.Point(144, 101);
+            button24.Location = new System.Drawing.Point(147, 115);
             button24.Margin = new Padding(4, 3, 4, 3);
             button24.Name = "button24";
             button24.Size = new System.Drawing.Size(117, 27);
@@ -788,7 +899,7 @@ namespace AppInstaller
             // 
             label15.AutoSize = true;
             label15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label15.Location = new System.Drawing.Point(144, 22);
+            label15.Location = new System.Drawing.Point(147, 36);
             label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
             label15.Size = new System.Drawing.Size(56, 21);
@@ -799,7 +910,7 @@ namespace AppInstaller
             // 
             pictureBox12.BackgroundImage = Properties.Resources.Steam_icon_logo1;
             pictureBox12.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox12.Location = new System.Drawing.Point(19, 22);
+            pictureBox12.Location = new System.Drawing.Point(22, 36);
             pictureBox12.Margin = new Padding(4, 3, 4, 3);
             pictureBox12.Name = "pictureBox12";
             pictureBox12.Size = new System.Drawing.Size(117, 106);
@@ -904,135 +1015,40 @@ namespace AppInstaller
             // 
             label16.AutoSize = true;
             label16.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label16.Location = new System.Drawing.Point(1029, 16);
+            label16.Location = new System.Drawing.Point(1011, 15);
             label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
             label16.Size = new System.Drawing.Size(86, 20);
             label16.TabIndex = 16;
             label16.Text = "Version v2.0";
             // 
-            // label18
+            // label31
             // 
-            label18.AutoSize = true;
-            label18.Location = new System.Drawing.Point(146, 170);
-            label18.Margin = new Padding(4, 0, 4, 0);
-            label18.Name = "label18";
-            label18.Size = new System.Drawing.Size(399, 39);
-            label18.TabIndex = 21;
-            label18.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Location = new System.Drawing.Point(146, 283);
-            label19.Margin = new Padding(4, 0, 4, 0);
-            label19.Name = "label19";
-            label19.Size = new System.Drawing.Size(399, 39);
-            label19.TabIndex = 22;
-            label19.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Location = new System.Drawing.Point(147, 404);
-            label20.Margin = new Padding(4, 0, 4, 0);
-            label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(380, 26);
-            label20.TabIndex = 23;
-            label20.Text = "Vivaldi is a Chromium-based browser developed by Vivaldi Technologies.\r\nThey claim to feature privacy features and it is their main point.";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Location = new System.Drawing.Point(147, 57);
-            label23.Margin = new Padding(4, 0, 4, 0);
-            label23.Name = "label23";
-            label23.Size = new System.Drawing.Size(399, 39);
-            label23.TabIndex = 30;
-            label23.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label24
-            // 
-            label24.AutoSize = true;
-            label24.Location = new System.Drawing.Point(149, 170);
-            label24.Margin = new Padding(4, 0, 4, 0);
-            label24.Name = "label24";
-            label24.Size = new System.Drawing.Size(399, 39);
-            label24.TabIndex = 31;
-            label24.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label25
-            // 
-            label25.AutoSize = true;
-            label25.Location = new System.Drawing.Point(149, 279);
-            label25.Margin = new Padding(4, 0, 4, 0);
-            label25.Name = "label25";
-            label25.Size = new System.Drawing.Size(399, 39);
-            label25.TabIndex = 32;
-            label25.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Location = new System.Drawing.Point(149, 396);
-            label26.Margin = new Padding(4, 0, 4, 0);
-            label26.Name = "label26";
-            label26.Size = new System.Drawing.Size(399, 39);
-            label26.TabIndex = 33;
-            label26.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label27
-            // 
-            label27.AutoSize = true;
-            label27.Location = new System.Drawing.Point(144, 43);
-            label27.Margin = new Padding(4, 0, 4, 0);
-            label27.Name = "label27";
-            label27.Size = new System.Drawing.Size(413, 45);
-            label27.TabIndex = 46;
-            label27.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label28
-            // 
-            label28.AutoSize = true;
-            label28.Location = new System.Drawing.Point(144, 155);
-            label28.Margin = new Padding(4, 0, 4, 0);
-            label28.Name = "label28";
-            label28.Size = new System.Drawing.Size(413, 45);
-            label28.TabIndex = 47;
-            label28.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.Location = new System.Drawing.Point(144, 269);
-            label29.Margin = new Padding(4, 0, 4, 0);
-            label29.Name = "label29";
-            label29.Size = new System.Drawing.Size(413, 45);
-            label29.TabIndex = 48;
-            label29.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
-            // 
-            // label30
-            // 
-            label30.AutoSize = true;
-            label30.Location = new System.Drawing.Point(144, 381);
-            label30.Margin = new Padding(4, 0, 4, 0);
-            label30.Name = "label30";
-            label30.Size = new System.Drawing.Size(413, 45);
-            label30.TabIndex = 49;
-            label30.Text = "Microsoft Edge is a Chromium-based browser developed by Microsoft.\r\nIt is the continuation of Microsoft's UWP-based Edge.\r\nIt currently has the ability to import from MS accounts AND Google accounts";
+            label31.AutoSize = true;
+            label31.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label31.ForeColor = System.Drawing.Color.Red;
+            label31.Location = new System.Drawing.Point(1069, 35);
+            label31.Name = "label31";
+            label31.Size = new System.Drawing.Size(61, 21);
+            label31.TabIndex = 17;
+            label31.Text = "ALPHA";
             // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new System.Drawing.Size(1148, 827);
+            Controls.Add(label31);
             Controls.Add(label16);
             Controls.Add(TabControl);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(progressBar1);
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            MdiChildrenMinimizedAnchorBottom = false;
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AppInstaller";
@@ -1142,6 +1158,7 @@ namespace AppInstaller
         private Label label29;
         private Label label28;
         private Label label27;
+        private Label label31;
     }
 }
 

@@ -483,23 +483,31 @@ namespace AppInstaller
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             string downloadpath = appinstallerfiles + "\\PrismLauncher.exe";
             progressBar1.Visible = true;
-            button22.Text = "Downloading...";
+            button18.Text = "Downloading...";
             WebClient client = new WebClient();
             client.DownloadProgressChanged += DownloadProgress;
             await client.DownloadFileTaskAsync(new Uri("https://github.com/PrismLauncher/PrismLauncher/releases/download/7.1/PrismLauncher-Windows-MSVC-Setup-7.1.exe"), downloadpath);
-            button22.Text = "Installing...";
+            button18.Text = "Installing...";
             var process = Process.Start(downloadpath, "/qn");
             process.WaitForExit();
             progressBar1.Visible = false;
-            button22.Text = "Installed";
+            button18.Text = "Installed";
             wait(5000);
-            button22.Text = "Update";
-            button21.Visible = true;
+            button18.Text = "Update";
+            button17.Visible = true;
         }
 
         private void button17_Click(object sender, EventArgs e)
         {
-            // Prism Launcher uninstaller
+            string uninst = GetEnvironmentVariable("%localappdata%") + "\\Programs\\PrismLauncher\\uninstall.exe";
+            button17.Text = "Uninstalling...";
+            var process = Process.Start(uninst);
+            process.WaitForExit();
+            button17.Text = "Uninstalled";
+            wait(5000);
+            button17.Visible = false;
+            button18.Text = "Install";
+
         }
 
         public void checkBox3_CheckedChanged(object sender, EventArgs e)

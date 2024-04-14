@@ -130,7 +130,8 @@ namespace AppInstaller
                     {
                         checkBox1.Checked = false;
                     }
-                } else
+                }
+                else
                 {
 
                 }
@@ -183,12 +184,13 @@ namespace AppInstaller
                     {
                         checkBox2.Checked = false;
                     }
-                } else
+                }
+                else
                 {
 
                 }
 
-                
+
             }
         }
 
@@ -550,7 +552,8 @@ namespace AppInstaller
                 button22.ForeColor = Color.Black;
                 button23.ForeColor = Color.Black;
                 button24.ForeColor = Color.Black;
-            } else
+            }
+            else
             {
                 Browsers.BackColor = Color.White;
                 Browsers.ForeColor = Color.Black;
@@ -589,6 +592,25 @@ namespace AppInstaller
                 button23.ForeColor = Color.Black;
                 button24.ForeColor = Color.Black;
             }
+        }
+
+        async private void button26_Click(object sender, EventArgs e)
+        {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            string downloadpath = appinstallerfiles + "\\vsredist.exe";
+            progressBar1.Visible = true;
+            button26.Text = "Downloading...";
+            WebClient client = new WebClient();
+            client.DownloadProgressChanged += DownloadProgress;
+            await client.DownloadFileTaskAsync(new Uri("https://github.com/PrismLauncher/PrismLauncher/releases/download/7.1/PrismLauncher-Windows-MSVC-Setup-7.1.exe"), downloadpath);
+            button18.Text = "Installing...";
+            var process = Process.Start(downloadpath, "/qn");
+            process.WaitForExit();
+            progressBar1.Visible = false;
+            button18.Text = "Installed";
+            wait(5000);
+            button18.Text = "Update";
+            button17.Visible = true;
         }
     }
 }

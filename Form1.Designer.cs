@@ -107,6 +107,12 @@ namespace AppInstaller
             progressBar1 = new ProgressBar();
             label16 = new Label();
             label31 = new Label();
+            tabPage1 = new TabPage();
+            label32 = new Label();
+            button25 = new Button();
+            button26 = new Button();
+            label33 = new Label();
+            pictureBox14 = new PictureBox();
             TabControl.SuspendLayout();
             Browsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -124,6 +130,8 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             Settings.SuspendLayout();
+            tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -154,6 +162,7 @@ namespace AppInstaller
             TabControl.Controls.Add(ChatApps);
             TabControl.Controls.Add(Gaming);
             TabControl.Controls.Add(Utilities);
+            TabControl.Controls.Add(tabPage1);
             TabControl.Controls.Add(Settings);
             TabControl.Location = new System.Drawing.Point(14, 70);
             TabControl.Margin = new Padding(4, 3, 4, 3);
@@ -200,7 +209,7 @@ namespace AppInstaller
             label20.Location = new System.Drawing.Point(147, 404);
             label20.Margin = new Padding(4, 0, 4, 0);
             label20.Name = "label20";
-            label20.Size = new System.Drawing.Size(380, 26);
+            label20.Size = new System.Drawing.Size(379, 26);
             label20.TabIndex = 23;
             label20.Text = "Vivaldi is a Chromium-based browser developed by Vivaldi Technologies.\r\nThey claim to feature privacy features and it is their main point.";
             // 
@@ -472,7 +481,7 @@ namespace AppInstaller
             label24.Location = new System.Drawing.Point(149, 170);
             label24.Margin = new Padding(4, 0, 4, 0);
             label24.Name = "label24";
-            label24.Size = new System.Drawing.Size(366, 13);
+            label24.Size = new System.Drawing.Size(365, 13);
             label24.TabIndex = 31;
             label24.Text = "Telegram is a privacy focused chat app similar to Viber and WhatsApp.";
             // 
@@ -723,7 +732,7 @@ namespace AppInstaller
             label28.Location = new System.Drawing.Point(147, 169);
             label28.Margin = new Padding(4, 0, 4, 0);
             label28.Name = "label28";
-            label28.Size = new System.Drawing.Size(398, 30);
+            label28.Size = new System.Drawing.Size(397, 30);
             label28.TabIndex = 47;
             label28.Text = "GOG Galaxy is an app that allows you to purchase, get, download and play\r\ngames from GOG.";
             // 
@@ -1033,6 +1042,74 @@ namespace AppInstaller
             label31.TabIndex = 17;
             label31.Text = "ALPHA";
             // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(label32);
+            tabPage1.Controls.Add(button25);
+            tabPage1.Controls.Add(button26);
+            tabPage1.Controls.Add(label33);
+            tabPage1.Controls.Add(pictureBox14);
+            tabPage1.Location = new System.Drawing.Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Size = new System.Drawing.Size(1112, 686);
+            tabPage1.TabIndex = 5;
+            tabPage1.Text = "Runtimes";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Location = new System.Drawing.Point(147, 57);
+            label32.Margin = new Padding(4, 0, 4, 0);
+            label32.Name = "label32";
+            label32.Size = new System.Drawing.Size(345, 15);
+            label32.TabIndex = 25;
+            label32.Text = "Redistributable runtime for Visual C++ (incl. versions 2015-2022)";
+            // 
+            // button25
+            // 
+            button25.Location = new System.Drawing.Point(278, 115);
+            button25.Margin = new Padding(4, 3, 4, 3);
+            button25.Name = "button25";
+            button25.Size = new System.Drawing.Size(117, 27);
+            button25.TabIndex = 24;
+            button25.Text = "Uninstall";
+            button25.UseVisualStyleBackColor = true;
+            button25.Visible = false;
+            // 
+            // button26
+            // 
+            button26.Location = new System.Drawing.Point(153, 115);
+            button26.Margin = new Padding(4, 3, 4, 3);
+            button26.Name = "button26";
+            button26.Size = new System.Drawing.Size(117, 27);
+            button26.TabIndex = 23;
+            button26.Text = "Install";
+            button26.UseVisualStyleBackColor = true;
+            button26.Click += button26_Click;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label33.Location = new System.Drawing.Point(147, 36);
+            label33.Margin = new Padding(4, 0, 4, 0);
+            label33.Name = "label33";
+            label33.Size = new System.Drawing.Size(247, 21);
+            label33.TabIndex = 22;
+            label33.Text = "VC++ 2015-2022 Redistributable";
+            // 
+            // pictureBox14
+            // 
+            pictureBox14.BackgroundImage = Properties.Resources.vs;
+            pictureBox14.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox14.Location = new System.Drawing.Point(22, 36);
+            pictureBox14.Margin = new Padding(4, 3, 4, 3);
+            pictureBox14.Name = "pictureBox14";
+            pictureBox14.Size = new System.Drawing.Size(117, 106);
+            pictureBox14.TabIndex = 21;
+            pictureBox14.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1075,6 +1152,9 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             Settings.ResumeLayout(false);
             Settings.PerformLayout();
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1159,6 +1239,12 @@ namespace AppInstaller
         private Label label28;
         private Label label27;
         private Label label31;
+        private TabPage tabPage1;
+        private Label label32;
+        private Button button25;
+        private Button button26;
+        private Label label33;
+        private PictureBox pictureBox14;
     }
 }
 

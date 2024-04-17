@@ -31,6 +31,7 @@ namespace AppInstaller
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             label2 = new Label();
             TabControl = new TabControl();
@@ -953,7 +954,7 @@ namespace AppInstaller
             // 
             // pictureBox13
             // 
-            pictureBox13.BackgroundImage = Properties.Resources.vs;
+            pictureBox13.BackgroundImage = (System.Drawing.Image)resources.GetObject("pictureBox13.BackgroundImage");
             pictureBox13.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox13.Location = new System.Drawing.Point(22, 36);
             pictureBox13.Margin = new Padding(4, 3, 4, 3);

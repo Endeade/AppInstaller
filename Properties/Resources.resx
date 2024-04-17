@@ -124,20 +124,23 @@
   <data name="Google_Chrome_icon_(February_2022).svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Google_Chrome_icon_(February_2022).svg.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="org.prismlauncher.PrismLauncher" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\org.prismlauncher.PrismLauncher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="revoltlogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\revoltlogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Firefox_logo,_2019.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Firefox_logo,_2019.svg.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="android-icon-192x192" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\android-icon-192x192.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="image" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Telegram_2019_Logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Telegram_2019_Logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="element" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\element.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,10 +157,10 @@
   <data name="beta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\beta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="android-icon-192x192" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\android-icon-192x192.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="org.prismlauncher.PrismLauncher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\org.prismlauncher.PrismLauncher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="vs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vs.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="vs1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vs1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

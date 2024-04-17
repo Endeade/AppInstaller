@@ -99,6 +99,7 @@ namespace AppInstaller
             pictureBox12 = new PictureBox();
             Utilities = new TabPage();
             tabPage1 = new TabPage();
+            pictureBox13 = new PictureBox();
             label32 = new Label();
             button25 = new Button();
             button26 = new Button();
@@ -112,7 +113,6 @@ namespace AppInstaller
             progressBar1 = new ProgressBar();
             label16 = new Label();
             label31 = new Label();
-            pictureBox13 = new PictureBox();
             TabControl.SuspendLayout();
             Browsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -130,8 +130,8 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
             tabPage1.SuspendLayout();
-            Settings.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
+            Settings.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -951,6 +951,17 @@ namespace AppInstaller
             tabPage1.Text = "Runtimes";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // pictureBox13
+            // 
+            pictureBox13.BackgroundImage = Properties.Resources.vs;
+            pictureBox13.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox13.Location = new System.Drawing.Point(22, 36);
+            pictureBox13.Margin = new Padding(4, 3, 4, 3);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new System.Drawing.Size(117, 106);
+            pictureBox13.TabIndex = 26;
+            pictureBox13.TabStop = false;
+            // 
             // label32
             // 
             label32.AutoSize = true;
@@ -1099,17 +1110,6 @@ namespace AppInstaller
             label31.TabIndex = 17;
             label31.Text = "ALPHA";
             // 
-            // pictureBox13
-            // 
-            pictureBox13.BackgroundImage = Properties.Resources.vs;
-            pictureBox13.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox13.Location = new System.Drawing.Point(22, 36);
-            pictureBox13.Margin = new Padding(4, 3, 4, 3);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new System.Drawing.Size(117, 106);
-            pictureBox13.TabIndex = 26;
-            pictureBox13.TabStop = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1152,9 +1152,9 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             Settings.ResumeLayout(false);
             Settings.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

@@ -98,6 +98,11 @@ namespace AppInstaller
             label15 = new Label();
             pictureBox12 = new PictureBox();
             Utilities = new TabPage();
+            tabPage1 = new TabPage();
+            label32 = new Label();
+            button25 = new Button();
+            button26 = new Button();
+            label33 = new Label();
             Settings = new TabPage();
             label22 = new Label();
             label21 = new Label();
@@ -107,12 +112,7 @@ namespace AppInstaller
             progressBar1 = new ProgressBar();
             label16 = new Label();
             label31 = new Label();
-            tabPage1 = new TabPage();
-            label32 = new Label();
-            button25 = new Button();
-            button26 = new Button();
-            label33 = new Label();
-            pictureBox14 = new PictureBox();
+            pictureBox13 = new PictureBox();
             TabControl.SuspendLayout();
             Browsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -129,9 +129,9 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            Settings.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
+            Settings.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -937,6 +937,63 @@ namespace AppInstaller
             Utilities.Text = "Utilities";
             Utilities.UseVisualStyleBackColor = true;
             // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(pictureBox13);
+            tabPage1.Controls.Add(label32);
+            tabPage1.Controls.Add(button25);
+            tabPage1.Controls.Add(button26);
+            tabPage1.Controls.Add(label33);
+            tabPage1.Location = new System.Drawing.Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Size = new System.Drawing.Size(1112, 686);
+            tabPage1.TabIndex = 5;
+            tabPage1.Text = "Runtimes";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Location = new System.Drawing.Point(147, 57);
+            label32.Margin = new Padding(4, 0, 4, 0);
+            label32.Name = "label32";
+            label32.Size = new System.Drawing.Size(345, 15);
+            label32.TabIndex = 25;
+            label32.Text = "Redistributable runtime for Visual C++ (incl. versions 2015-2022)";
+            // 
+            // button25
+            // 
+            button25.Location = new System.Drawing.Point(278, 115);
+            button25.Margin = new Padding(4, 3, 4, 3);
+            button25.Name = "button25";
+            button25.Size = new System.Drawing.Size(117, 27);
+            button25.TabIndex = 24;
+            button25.Text = "Uninstall";
+            button25.UseVisualStyleBackColor = true;
+            button25.Visible = false;
+            // 
+            // button26
+            // 
+            button26.Location = new System.Drawing.Point(153, 115);
+            button26.Margin = new Padding(4, 3, 4, 3);
+            button26.Name = "button26";
+            button26.Size = new System.Drawing.Size(117, 27);
+            button26.TabIndex = 23;
+            button26.Text = "Install";
+            button26.UseVisualStyleBackColor = true;
+            button26.Click += button26_Click;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label33.Location = new System.Drawing.Point(147, 36);
+            label33.Margin = new Padding(4, 0, 4, 0);
+            label33.Name = "label33";
+            label33.Size = new System.Drawing.Size(247, 21);
+            label33.TabIndex = 22;
+            label33.Text = "VC++ 2015-2022 Redistributable";
+            // 
             // Settings
             // 
             Settings.Controls.Add(label22);
@@ -1042,73 +1099,16 @@ namespace AppInstaller
             label31.TabIndex = 17;
             label31.Text = "ALPHA";
             // 
-            // tabPage1
+            // pictureBox13
             // 
-            tabPage1.Controls.Add(label32);
-            tabPage1.Controls.Add(button25);
-            tabPage1.Controls.Add(button26);
-            tabPage1.Controls.Add(label33);
-            tabPage1.Controls.Add(pictureBox14);
-            tabPage1.Location = new System.Drawing.Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Size = new System.Drawing.Size(1112, 686);
-            tabPage1.TabIndex = 5;
-            tabPage1.Text = "Runtimes";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label32
-            // 
-            label32.AutoSize = true;
-            label32.Location = new System.Drawing.Point(147, 57);
-            label32.Margin = new Padding(4, 0, 4, 0);
-            label32.Name = "label32";
-            label32.Size = new System.Drawing.Size(345, 15);
-            label32.TabIndex = 25;
-            label32.Text = "Redistributable runtime for Visual C++ (incl. versions 2015-2022)";
-            // 
-            // button25
-            // 
-            button25.Location = new System.Drawing.Point(278, 115);
-            button25.Margin = new Padding(4, 3, 4, 3);
-            button25.Name = "button25";
-            button25.Size = new System.Drawing.Size(117, 27);
-            button25.TabIndex = 24;
-            button25.Text = "Uninstall";
-            button25.UseVisualStyleBackColor = true;
-            button25.Visible = false;
-            // 
-            // button26
-            // 
-            button26.Location = new System.Drawing.Point(153, 115);
-            button26.Margin = new Padding(4, 3, 4, 3);
-            button26.Name = "button26";
-            button26.Size = new System.Drawing.Size(117, 27);
-            button26.TabIndex = 23;
-            button26.Text = "Install";
-            button26.UseVisualStyleBackColor = true;
-            button26.Click += button26_Click;
-            // 
-            // label33
-            // 
-            label33.AutoSize = true;
-            label33.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label33.Location = new System.Drawing.Point(147, 36);
-            label33.Margin = new Padding(4, 0, 4, 0);
-            label33.Name = "label33";
-            label33.Size = new System.Drawing.Size(247, 21);
-            label33.TabIndex = 22;
-            label33.Text = "VC++ 2015-2022 Redistributable";
-            // 
-            // pictureBox14
-            // 
-            pictureBox14.BackgroundImage = Properties.Resources.vs;
-            pictureBox14.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox14.Location = new System.Drawing.Point(22, 36);
-            pictureBox14.Margin = new Padding(4, 3, 4, 3);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new System.Drawing.Size(117, 106);
-            pictureBox14.TabIndex = 21;
-            pictureBox14.TabStop = false;
+            pictureBox13.BackgroundImage = Properties.Resources.vs;
+            pictureBox13.BackgroundImageLayout = ImageLayout.Zoom;
+            pictureBox13.Location = new System.Drawing.Point(22, 36);
+            pictureBox13.Margin = new Padding(4, 3, 4, 3);
+            pictureBox13.Name = "pictureBox13";
+            pictureBox13.Size = new System.Drawing.Size(117, 106);
+            pictureBox13.TabIndex = 26;
+            pictureBox13.TabStop = false;
             // 
             // Form1
             // 
@@ -1150,11 +1150,11 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            Settings.ResumeLayout(false);
-            Settings.PerformLayout();
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
+            Settings.ResumeLayout(false);
+            Settings.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1244,7 +1244,7 @@ namespace AppInstaller
         private Button button25;
         private Button button26;
         private Label label33;
-        private PictureBox pictureBox14;
+        private PictureBox pictureBox13;
     }
 }
 

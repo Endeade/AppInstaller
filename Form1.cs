@@ -242,7 +242,7 @@ namespace AppInstaller
             button4.Text = "Downloading...";
             WebClient client = new WebClient();
             client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://downloads.vivaldi.com/stable/Vivaldi.6.1.3035.111.x64.exe"), downloadpath);
+            await client.DownloadFileTaskAsync(new Uri("https://downloads.vivaldi.com/stable/Vivaldi.6.6.3271.61.x64.exe"), downloadpath);
             button4.Text = "Installing...";
             var process = Process.Start(downloadpath, "--vivaldi-silent --do-not-launch-chrome --system-level");
             process.WaitForExit();
@@ -261,7 +261,7 @@ namespace AppInstaller
             button6.Text = "Downloading...";
             WebClient client = new WebClient();
             client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://dl.discordapp.net/distro/app/stable/win/x86/1.0.9015/DiscordSetup.exe"), downloadpath);
+            await client.DownloadFileTaskAsync(new Uri("https://dl.discordapp.net/distro/app/stable/win/x64/1.0.9039/DiscordSetup.exe"), downloadpath);
             button6.Text = "Installing...";
             var process = Process.Start(downloadpath, "-s");
             process.WaitForExit();
@@ -603,14 +603,14 @@ namespace AppInstaller
             WebClient client = new WebClient();
             client.DownloadProgressChanged += DownloadProgress;
             await client.DownloadFileTaskAsync(new Uri("https://github.com/PrismLauncher/PrismLauncher/releases/download/7.1/PrismLauncher-Windows-MSVC-Setup-7.1.exe"), downloadpath);
-            button18.Text = "Installing...";
+            button26.Text = "Installing...";
             var process = Process.Start(downloadpath, "/qn");
             process.WaitForExit();
             progressBar1.Visible = false;
             button18.Text = "Installed";
             wait(5000);
-            button18.Text = "Update";
-            button17.Visible = true;
+            button26.Text = "Update";
+            button25.Text = "Uninstall unsupported";
         }
     }
 }

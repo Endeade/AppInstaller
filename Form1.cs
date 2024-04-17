@@ -597,7 +597,7 @@ namespace AppInstaller
         async private void button26_Click(object sender, EventArgs e)
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string downloadpath = appinstallerfiles + "\\vsredist.exe";
+            string downloadpath = appinstallerfiles + "\\vcredist.exe";
             progressBar1.Visible = true;
             button26.Text = "Downloading...";
             WebClient client = new WebClient();

@@ -421,15 +421,29 @@ namespace AppInstaller
 
         private void button23_Click(object sender, EventArgs e)
         {
-            // only works on x64 systems, needs fix
-            string uninst = GetEnvironmentVariable("ProgramFiles(x86)") + "\\Steam\\uninstall.exe";
-            button23.Text = "Uninstalling...";
-            var process = Process.Start(uninst, "/S");
-            process.WaitForExit();
-            button23.Text = "Uninstalled";
-            wait(5000);
-            button23.Visible = false;
-            button21.Text = "Install";
+            bool is64bitOS = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"));
+            if (is64bitOS)
+            {
+                string uninst = GetEnvironmentVariable("ProgramFiles(x86)") + "\\Steam\\uninstall.exe";
+                button23.Text = "Uninstalling...";
+                var process = Process.Start(uninst, "/S");
+                process.WaitForExit();
+                button23.Text = "Uninstalled";
+                wait(5000);
+                button23.Visible = false;
+                button21.Text = "Install";
+            } else
+            {
+                string uninst = GetEnvironmentVariable("ProgramFiles") + "\\Steam\\uninstall.exe";
+                button23.Text = "Uninstalling...";
+                var process = Process.Start(uninst, "/S");
+                process.WaitForExit();
+                button23.Text = "Uninstalled";
+                wait(5000);
+                button23.Visible = false;
+                button21.Text = "Install";
+            }
+            
         }
 
         private async void button22_Click(object sender, EventArgs e)
@@ -596,21 +610,43 @@ namespace AppInstaller
 
         async private void button26_Click(object sender, EventArgs e)
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string downloadpath = appinstallerfiles + "\\vcredist.exe";
-            progressBar1.Visible = true;
-            button26.Text = "Downloading...";
-            WebClient client = new WebClient();
-            client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://github.com/PrismLauncher/PrismLauncher/releases/download/7.1/PrismLauncher-Windows-MSVC-Setup-7.1.exe"), downloadpath);
-            button26.Text = "Installing...";
-            var process = Process.Start(downloadpath, "/qn");
-            process.WaitForExit();
-            progressBar1.Visible = false;
-            button18.Text = "Installed";
-            wait(5000);
-            button26.Text = "Update";
-            button25.Text = "Uninstall unsupported";
+            bool is64bitOS = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("PROCESSOR_ARCHITEW6432"));
+            if (is64bitOS)
+            {
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                string downloadpath = appinstallerfiles + "\\vcredist.exe";
+                progressBar1.Visible = true;
+                button26.Text = "Downloading...";
+                WebClient client = new WebClient();
+                client.DownloadProgressChanged += DownloadProgress;
+                await client.DownloadFileTaskAsync(new Uri("https://aka.ms/vs/17/release/vc_redist.x64.exe"), downloadpath);
+                button26.Text = "Installing...";
+                var process = Process.Start(downloadpath, "/qn");
+                process.WaitForExit();
+                progressBar1.Visible = false;
+                button18.Text = "Installed";
+                wait(5000);
+                button26.Text = "Update";
+                button25.Text = "Uninstall unsupported";
+            } else
+            {
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                string downloadpath = appinstallerfiles + "\\vcredist.exe";
+                progressBar1.Visible = true;
+                button26.Text = "Downloading...";
+                WebClient client = new WebClient();
+                client.DownloadProgressChanged += DownloadProgress;
+                await client.DownloadFileTaskAsync(new Uri("https://aka.ms/vs/17/release/vc_redist.x86.exe"), downloadpath);
+                button26.Text = "Installing...";
+                var process = Process.Start(downloadpath, "/qn");
+                process.WaitForExit();
+                progressBar1.Visible = false;
+                button18.Text = "Installed";
+                wait(5000);
+                button26.Text = "Update";
+                button25.Text = "Uninstall unsupported";
+            }
+
         }
     }
 }

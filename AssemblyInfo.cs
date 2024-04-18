@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("AppInstaller")]
-[assembly: AssemblyDescription("A GUI application to assist setting up a new Windows installation with your choice of apps")]
+[assembly: AssemblyDescription("A GUI application to assist setting up a new Windows installation with your choice of apps.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("AppInstaller")]
-[assembly: AssemblyCopyright("Copyright © Endeade 2023")]
+[assembly: AssemblyCopyright("Copyright © Endeade 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

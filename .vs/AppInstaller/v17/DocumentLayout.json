@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|c:\\users\\endeade\\documents\\github\\appinstaller\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|c:\\users\\endeade\\documents\\github\\appinstaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|solutionrelative:form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|c:\\users\\endeade\\documents\\github\\appinstaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -22,11 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\AssemblyInfo.cs",
+              "RelativeToolTip": "AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T10:20:00.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -34,33 +51,31 @@
               "RelativeToolTip": "Form1.Designer.cs",
               "ViewState": "AQIAAJMDAAAAAAAAAAAnwNgDAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T14:15:57.876Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-14T14:15:57.876Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAPYBAAAAAAAAAAAqwFcCAAA7AAAA",
+              "ViewState": "AQIAANUBAAAAAAAAAAAswPEBAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-14T14:14:40.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\Users\\Endeade\\Documents\\GitHub\\AppInstaller\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-14T14:09:53.512Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-14T14:09:53.512Z"
             }
           ]
         }

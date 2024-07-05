@@ -489,7 +489,7 @@ namespace AppInstaller
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new System.Drawing.Point(151, 55);
+            label23.Location = new System.Drawing.Point(150, 57);
             label23.Margin = new Padding(4, 0, 4, 0);
             label23.Name = "label23";
             label23.Size = new System.Drawing.Size(307, 13);
@@ -740,12 +740,12 @@ namespace AppInstaller
             // label27
             // 
             label27.AutoSize = true;
-            label27.Location = new System.Drawing.Point(147, 57);
+            label27.Location = new System.Drawing.Point(148, 57);
             label27.Margin = new Padding(4, 0, 4, 0);
             label27.Name = "label27";
-            label27.Size = new System.Drawing.Size(308, 15);
+            label27.Size = new System.Drawing.Size(247, 15);
             label27.TabIndex = 46;
-            label27.Text = "Steam is Valve's proprietary game launcher and manager.\r\n";
+            label27.Text = "Steam is Valve's game launcher and manager.\r\n";
             // 
             // button17
             // 

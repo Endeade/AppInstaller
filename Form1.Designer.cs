@@ -57,13 +57,9 @@ namespace AppInstaller
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             ChatApps = new TabPage();
-            label26 = new Label();
             label25 = new Label();
             label24 = new Label();
             label23 = new Label();
-            button15 = new Button();
-            button16 = new Button();
-            label11 = new Label();
             button13 = new Button();
             button14 = new Button();
             label10 = new Label();
@@ -73,7 +69,6 @@ namespace AppInstaller
             button10 = new Button();
             button6 = new Button();
             label8 = new Label();
-            pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
@@ -121,7 +116,6 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ChatApps.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
@@ -426,13 +420,9 @@ namespace AppInstaller
             // 
             // ChatApps
             // 
-            ChatApps.Controls.Add(label26);
             ChatApps.Controls.Add(label25);
             ChatApps.Controls.Add(label24);
             ChatApps.Controls.Add(label23);
-            ChatApps.Controls.Add(button15);
-            ChatApps.Controls.Add(button16);
-            ChatApps.Controls.Add(label11);
             ChatApps.Controls.Add(button13);
             ChatApps.Controls.Add(button14);
             ChatApps.Controls.Add(label10);
@@ -442,7 +432,6 @@ namespace AppInstaller
             ChatApps.Controls.Add(button10);
             ChatApps.Controls.Add(button6);
             ChatApps.Controls.Add(label8);
-            ChatApps.Controls.Add(pictureBox8);
             ChatApps.Controls.Add(pictureBox7);
             ChatApps.Controls.Add(pictureBox5);
             ChatApps.Controls.Add(pictureBox6);
@@ -455,16 +444,6 @@ namespace AppInstaller
             ChatApps.TabIndex = 1;
             ChatApps.Text = "Chat apps";
             ChatApps.UseVisualStyleBackColor = true;
-            // 
-            // label26
-            // 
-            label26.AutoSize = true;
-            label26.Location = new System.Drawing.Point(149, 394);
-            label26.Margin = new Padding(4, 0, 4, 0);
-            label26.Name = "label26";
-            label26.Size = new System.Drawing.Size(167, 13);
-            label26.TabIndex = 33;
-            label26.Text = "ion even know what this shit is";
             // 
             // label25
             // 
@@ -495,40 +474,6 @@ namespace AppInstaller
             label23.Size = new System.Drawing.Size(307, 13);
             label23.TabIndex = 30;
             label23.Text = "Discord is a chat platform based and focused on \"gamers\".\r\n";
-            // 
-            // button15
-            // 
-            button15.Location = new System.Drawing.Point(271, 455);
-            button15.Margin = new Padding(4, 3, 4, 3);
-            button15.Name = "button15";
-            button15.Size = new System.Drawing.Size(117, 27);
-            button15.TabIndex = 29;
-            button15.Text = "Uninstall";
-            button15.UseVisualStyleBackColor = true;
-            button15.Visible = false;
-            button15.Click += button15_Click;
-            // 
-            // button16
-            // 
-            button16.Location = new System.Drawing.Point(147, 455);
-            button16.Margin = new Padding(4, 3, 4, 3);
-            button16.Name = "button16";
-            button16.Size = new System.Drawing.Size(117, 27);
-            button16.TabIndex = 28;
-            button16.Text = "Install";
-            button16.UseVisualStyleBackColor = true;
-            button16.Click += button16_Click;
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label11.Location = new System.Drawing.Point(147, 375);
-            label11.Margin = new Padding(4, 0, 4, 0);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(69, 21);
-            label11.TabIndex = 27;
-            label11.Text = "Element";
             // 
             // button13
             // 
@@ -631,17 +576,6 @@ namespace AppInstaller
             label8.Size = new System.Drawing.Size(66, 21);
             label8.TabIndex = 12;
             label8.Text = "Discord";
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.BackgroundImage = Properties.Resources.element;
-            pictureBox8.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox8.Location = new System.Drawing.Point(22, 375);
-            pictureBox8.Margin = new Padding(4, 3, 4, 3);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new System.Drawing.Size(117, 106);
-            pictureBox8.TabIndex = 26;
-            pictureBox8.TabStop = false;
             // 
             // pictureBox7
             // 
@@ -1093,23 +1027,23 @@ namespace AppInstaller
             // 
             label16.AutoSize = true;
             label16.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label16.Location = new System.Drawing.Point(1011, 15);
+            label16.Location = new System.Drawing.Point(1053, 9);
             label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
-            label16.Size = new System.Drawing.Size(86, 20);
+            label16.Size = new System.Drawing.Size(35, 20);
             label16.TabIndex = 16;
-            label16.Text = "Version v2.0";
+            label16.Text = "v2.0";
             // 
             // label31
             // 
             label31.AutoSize = true;
             label31.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             label31.ForeColor = System.Drawing.Color.Red;
-            label31.Location = new System.Drawing.Point(1069, 35);
+            label31.Location = new System.Drawing.Point(1083, 8);
             label31.Name = "label31";
-            label31.Size = new System.Drawing.Size(61, 21);
+            label31.Size = new System.Drawing.Size(47, 21);
             label31.TabIndex = 17;
-            label31.Text = "ALPHA";
+            label31.Text = "BETA";
             // 
             // Form1
             // 
@@ -1141,7 +1075,6 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ChatApps.ResumeLayout(false);
             ChatApps.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
@@ -1202,10 +1135,6 @@ namespace AppInstaller
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.TabPage Gaming;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
@@ -1231,7 +1160,6 @@ namespace AppInstaller
         private Label label20;
         private Label label19;
         private Label label18;
-        private Label label26;
         private Label label25;
         private Label label24;
         private Label label23;

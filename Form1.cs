@@ -168,8 +168,6 @@ namespace AppInstaller
                         button12.ForeColor = Color.Black;
                         button13.ForeColor = Color.Black;
                         button14.ForeColor = Color.Black;
-                        button15.ForeColor = Color.Black;
-                        button16.ForeColor = Color.Black;
                         button17.ForeColor = Color.Black;
                         button18.ForeColor = Color.Black;
                         button19.ForeColor = Color.Black;
@@ -318,24 +316,6 @@ namespace AppInstaller
             button1.Text = "Install";
         }
 
-        private async void button16_Click(object sender, EventArgs e)
-        {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string downloadpath = appinstallerfiles + "\\Element.exe";
-            progressBar1.Visible = true;
-            button16.Text = "Downloading...";
-            WebClient client = new WebClient();
-            client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://packages.riot.im/desktop/install/win32/ia32/Element%20Setup.exe"), downloadpath);
-            button16.Text = "Installing...";
-            var process = Process.Start(downloadpath, "-s");
-            process.WaitForExit();
-            progressBar1.Visible = false;
-            button16.Text = "Installed";
-            wait(5000);
-            button16.Text = "Update";
-            button15.Visible = true;
-        }
 
         private void button11_Click(object sender, EventArgs e)
         {
@@ -387,11 +367,6 @@ namespace AppInstaller
         private void button9_Click(object sender, EventArgs e)
         {
             //Vivaldi uninstall
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            //Element uninstall
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
@@ -556,8 +531,6 @@ namespace AppInstaller
                 button12.ForeColor = Color.Black;
                 button13.ForeColor = Color.Black;
                 button14.ForeColor = Color.Black;
-                button15.ForeColor = Color.Black;
-                button16.ForeColor = Color.Black;
                 button17.ForeColor = Color.Black;
                 button18.ForeColor = Color.Black;
                 button19.ForeColor = Color.Black;
@@ -595,8 +568,6 @@ namespace AppInstaller
                 button12.ForeColor = Color.Black;
                 button13.ForeColor = Color.Black;
                 button14.ForeColor = Color.Black;
-                button15.ForeColor = Color.Black;
-                button16.ForeColor = Color.Black;
                 button17.ForeColor = Color.Black;
                 button18.ForeColor = Color.Black;
                 button19.ForeColor = Color.Black;

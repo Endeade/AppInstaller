@@ -196,28 +196,29 @@ namespace AppInstaller
 
         private async void button2_Click(object sender, EventArgs e)
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string downloadpath = appinstallerfiles + "\\Chrome.msi";
             progressBar1.Visible = true;
-            button1.Text = "Downloading...";
-            WebClient client = new WebClient();
-            client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7BA2AFEE09-00D4-4A6E-BFAB-365F04535F02%7D%26lang%3Den%26browser%3D5%26usagestats%3D0%26appname%3DGoogle%2520Chrome%26needsadmin%3Dtrue%26ap%3Dx64-stable-statsdef_0%26brand%3DGCEA/dl/chrome/install/googlechromestandaloneenterprise64.msi"), downloadpath);
-            button1.Text = "Installing...";
-            var process = Process.Start(downloadpath, "/qn");
+            button2.Text = "Installing through winget";
+            progressBar1.Value = 50;
+            var process = Process.Start("cmd", "/c winget install --id Google.Chrome");
             process.WaitForExit();
+            progressBar1.Value = 100;
+            wait(1000);
             progressBar1.Visible = false;
             button1.Text = "Installed";
             wait(5000);
-            button1.Text = "Update";
+            button2.Text = "Update";
             button7.Visible = true;
         }
 
         private async void button3_Click(object sender, EventArgs e)
         {
+            progressBar1.Visible = true;
+            progressBar1.Value = 50;
             button3.Text = "Installing through winget...";
             var process = Process.Start("cmd", "/c winget install --id Mozilla.Firefox");
             process.WaitForExit();
+            progressBar1.Value = 100;
+            wait(1000);
             progressBar1.Visible = false;
             button3.Text = "Installed";
             wait(5000);

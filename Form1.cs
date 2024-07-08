@@ -215,15 +215,8 @@ namespace AppInstaller
 
         private async void button3_Click(object sender, EventArgs e)
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string downloadpath = appinstallerfiles + "\\Firefox.msi";
-            progressBar1.Visible = true;
-            button3.Text = "Downloading...";
-            WebClient client = new WebClient();
-            client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://download.mozilla.org/?product=firefox-msi-latest-ssl&os=win64&lang=en-US&_gl=1*1r8hyod*_ga*MjAzODg4MzkwNi4xNjg5NTg5MzMx*_ga_MQ7767QQQW*MTY4OTU4OTMzMC4xLjEuMTY4OTU4OTM2OS4wLjAuMA.."), downloadpath);
-            button3.Text = "Installing...";
-            var process = Process.Start(downloadpath, "/qn");
+            button3.Text = "Installing through winget...";
+            var process = Process.Start("cmd", "/c winget install --id Mozilla.Firefox");
             process.WaitForExit();
             progressBar1.Visible = false;
             button3.Text = "Installed";

@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "D:\\AppInstaller\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|d:\\appinstaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|d:\\appinstaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|D:\\AppInstaller\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FC9A3CC8-01F7-457D-9C5D-B6103A3582DA}|AppInstaller.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -19,14 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\AppInstaller\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\AppInstaller\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAALwAAAAAAAAAAAAhwNoAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-08T09:07:26.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\AppInstaller\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\AppInstaller\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-05T11:57:57.349Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-07-05T11:57:57.349Z"
             }
           ]
         }

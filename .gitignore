@@ -12,6 +12,8 @@ bld/
 [Oo]bj/
 [Ll]og/
 [Ll]ogs/
+bin/
+obj/
 bin/Debug/AppInstaller.exe
 bin/Debug/AppInstaller.exe.config
 bin/Debug/AppInstaller.pdb
@@ -24,6 +26,7 @@ obj/Debug/AppInstaller.exe
 obj/Debug/AppInstaller.Form1.resources
 obj/Debug/AppInstaller.pdb
 obj/Debug/AppInstaller.Properties.Resources.resources
+.vs/
 .vs/AppInstaller/v17/.suo
 .vs/AppInstaller/FileContentIndex/63c7c7d3-9dd6-4487-9843-dab562765dff.vsidx
 .vs/AppInstaller/FileContentIndex/6e723bca-7cd5-40bd-a118-6a41668b1efc.vsidx

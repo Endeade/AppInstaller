@@ -80,16 +80,13 @@ namespace AppInstaller
 
         private async void button1_Click(object sender, EventArgs c)
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string downloadpath = appinstallerfiles + "\\Edge.msi";
             progressBar1.Visible = true;
-            button1.Text = "Downloading...";
-            WebClient client = new WebClient();
-            client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://msedge.sf.dl.delivery.mp.microsoft.com/filestreamingservice/files/e25e63b7-e29e-4c86-bd45-e7d683b9a2bd/MicrosoftEdgeEnterpriseX64.msi"), downloadpath);
-            button1.Text = "Installing...";
-            var process = Process.Start(downloadpath, "/qn");
+            progressBar1.Value = 50;
+            button1.Text = "Installing through winget...";
+            var process = Process.Start("cmd", "/c winget install --id Microsoft.Edge");
             process.WaitForExit();
+            progressBar1.Value = 100;
+            wait(1000);
             progressBar1.Visible = false;
             button1.Text = "Installed";
             wait(5000);
@@ -228,16 +225,13 @@ namespace AppInstaller
 
         private async void button4_Click(object sender, EventArgs e)
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string downloadpath = appinstallerfiles + "\\Vivaldi.exe";
             progressBar1.Visible = true;
-            button4.Text = "Downloading...";
-            WebClient client = new WebClient();
-            client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://downloads.vivaldi.com/stable/Vivaldi.6.6.3271.61.x64.exe"), downloadpath);
-            button4.Text = "Installing...";
-            var process = Process.Start(downloadpath, "--vivaldi-silent --do-not-launch-chrome --system-level");
+            progressBar1.Value = 50;
+            button4.Text = "Installing through winget...";
+            var process = Process.Start("cmd", "/c winget install --id Vivaldi.Vivaldi");
             process.WaitForExit();
+            progressBar1.Value = 100;
+            wait(1000);
             progressBar1.Visible = false;
             button4.Text = "Installed";
             wait(5000);

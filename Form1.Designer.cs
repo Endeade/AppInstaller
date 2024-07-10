@@ -109,6 +109,7 @@ namespace AppInstaller
             progressBar1 = new ProgressBar();
             label16 = new Label();
             label31 = new Label();
+            label11 = new Label();
             TabControl.SuspendLayout();
             Browsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -1045,6 +1046,17 @@ namespace AppInstaller
             label31.TabIndex = 17;
             label31.Text = "BETA";
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label11.Location = new System.Drawing.Point(934, 29);
+            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(196, 20);
+            label11.TabIndex = 18;
+            label11.Text = "WinGet support testing build";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1052,6 +1064,7 @@ namespace AppInstaller
             AutoSize = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new System.Drawing.Size(1148, 827);
+            Controls.Add(label11);
             Controls.Add(label31);
             Controls.Add(label16);
             Controls.Add(TabControl);
@@ -1174,6 +1187,7 @@ namespace AppInstaller
         private Button button26;
         private Label label33;
         private PictureBox pictureBox13;
+        private Label label11;
     }
 }
 

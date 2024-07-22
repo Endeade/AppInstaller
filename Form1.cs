@@ -108,6 +108,14 @@ namespace AppInstaller
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            TaskDialogPage pg = new TaskDialogPage();
+            pg.Heading = "This is a testing build";
+            pg.Text = "This is a tesint build of AppInstaller, everything is UTTERLY BROKEN!!!";
+            pg.Icon = TaskDialogIcon.Warning;
+            TaskDialogButtonCollection value = [TaskDialogButton.OK];
+            pg.Buttons = value;
+            pg.Caption = "AppInstaller";
+            TaskDialog.ShowDialog(pg);
             string appinstallerfiles = Environment.GetEnvironmentVariable("userprofile") + "\\Downloads\\appinstallerfiles";
             if (Directory.Exists(appinstallerfiles))
             {

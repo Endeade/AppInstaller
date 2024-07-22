@@ -17,6 +17,8 @@ using System.Security.AccessControl;
 using System.Runtime.InteropServices;
 using AutoUpdaterDotNET;
 using Microsoft.Win32;
+using KPreisser.UI;
+using static System.Windows.Forms.LinkLabel;
 
 namespace AppInstaller
 {
@@ -108,14 +110,21 @@ namespace AppInstaller
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            TaskDialogPage pg = new TaskDialogPage();
-            pg.Heading = "This is a testing build";
-            pg.Text = "This is a tesint build of AppInstaller, everything is UTTERLY BROKEN!!!";
-            pg.Icon = TaskDialogIcon.Warning;
-            TaskDialogButtonCollection value = [TaskDialogButton.OK];
-            pg.Buttons = value;
-            pg.Caption = "AppInstaller";
-            TaskDialog.ShowDialog(pg);
+            KPreisser.UI.TaskDialog td = new();
+            td.Page.Text = "This is a beta build of AppInstaller";
+            td.Page.Instruction = "If you do run into bugs, please report them.";
+            td.Page.Title = "AppInstaller";
+            td.Page.StandardButtons = TaskDialogButtons.OK;
+            td.Page.Icon = TaskDialogStandardIcon.SecurityWarningYellowBar;
+            td.Page.EnableHyperlinks = true;
+            KPreisser.UI.TaskDialogExpander tde = new();
+            tde.Text = "You can launch, but the experience will be buggy";
+            tde.Expanded = true;
+            tde.ExpandFooterArea = true;
+            tde.CollapsedButtonText = "More info";
+            tde.ExpandedButtonText = "Less info";
+            td.Page.Expander = tde;
+            td.Show();
             string appinstallerfiles = Environment.GetEnvironmentVariable("userprofile") + "\\Downloads\\appinstallerfiles";
             if (Directory.Exists(appinstallerfiles))
             {

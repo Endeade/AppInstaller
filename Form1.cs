@@ -28,7 +28,6 @@ namespace AppInstaller
             var timer1 = new System.Windows.Forms.Timer();
             if (milliseconds == 0 || milliseconds < 0) return;
 
-            // Console.WriteLine("start wait timer");
             timer1.Interval = milliseconds;
             timer1.Enabled = true;
             timer1.Start();
@@ -37,7 +36,6 @@ namespace AppInstaller
             {
                 timer1.Enabled = false;
                 timer1.Stop();
-                // Console.WriteLine("stop wait timer");
             };
 
             while (timer1.Enabled)
@@ -77,6 +75,11 @@ namespace AppInstaller
             }
 
         }
+
+        // all of this winget shit is FUCKING BROKEN!
+        // IT IS A TESTING BUILD
+        // i am aware of all the fucking bugs with it
+        // calm your asses down while i fucking fix them up
 
         private async void button1_Click(object sender, EventArgs c)
         {

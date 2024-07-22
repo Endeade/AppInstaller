@@ -81,6 +81,10 @@ namespace AppInstaller
         // i am aware of all the fucking bugs with it
         // calm your asses down while i fucking fix them up
 
+        // istfg visual studio if i get ANOTHER FUCKING 
+        // WARNING ABOUT ME NOT USING AWAIT OPERATORS
+        // I WILL BURN THE MS HEADQUARTERS
+
         private async void button1_Click(object sender, EventArgs c)
         {
             progressBar1.Visible = true;

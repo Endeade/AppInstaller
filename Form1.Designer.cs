@@ -1050,12 +1050,12 @@ namespace AppInstaller
             // 
             label11.AutoSize = true;
             label11.Font = new System.Drawing.Font("Segoe UI Semilight", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label11.Location = new System.Drawing.Point(934, 29);
+            label11.Location = new System.Drawing.Point(961, 29);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(196, 20);
+            label11.Size = new System.Drawing.Size(169, 20);
             label11.TabIndex = 18;
-            label11.Text = "WinGet support testing build";
+            label11.Text = "PM support testing build";
             // 
             // Form1
             // 

@@ -265,20 +265,18 @@ namespace AppInstaller
 
         private async void button6_Click(object sender, EventArgs e)
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-            string downloadpath = appinstallerfiles + "\\Discord.exe";
             progressBar1.Visible = true;
-            button6.Text = "Downloading...";
-            WebClient client = new WebClient();
-            client.DownloadProgressChanged += DownloadProgress;
-            await client.DownloadFileTaskAsync(new Uri("https://dl.discordapp.net/distro/app/stable/win/x64/1.0.9039/DiscordSetup.exe"), downloadpath);
-            button6.Text = "Installing...";
-            var process = Process.Start(downloadpath, "-s");
+            button6.Text = "Installing through winget";
+            progressBar1.Value = 50;
+            var process = Process.Start("cmd", "/c winget install --id Discord.Discord");
             process.WaitForExit();
+            progressBar1.Value = 100;
+            wait(1000);
             progressBar1.Visible = false;
-            button6.Text = "Installed";
+            button1.Text = "Installed";
             wait(5000);
             button6.Text = "Update";
+            button10.Visible = true;
         }
 
 
@@ -303,9 +301,8 @@ namespace AppInstaller
 
         private void button10_Click(object sender, EventArgs e)
         {
-            string uninst = GetEnvironmentVariable("localappdata") + "\\Discord\\Update.exe";
             button10.Text = "Uninstalling...";
-            var process = Process.Start(uninst, "--uninstall -s");
+            var process = Process.Start("cmd", "/c winget uninstall --id Discord.Discord");
             process.WaitForExit();
             button10.Text = "Uninstalled";
             wait(5000);

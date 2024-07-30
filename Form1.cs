@@ -163,6 +163,10 @@ namespace AppInstaller
 
                     if (DarkMode == 1)
                     {
+                        Runtimes.BackColor = Color.Black;
+                        Runtimes.BackColor = Color.White;
+                        button25.ForeColor = Color.Black;
+                        button26.ForeColor = Color.Black;
                         Browsers.BackColor = Color.Black;
                         Browsers.ForeColor = Color.White;
                         ChatApps.BackColor = Color.Black;

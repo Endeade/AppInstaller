@@ -94,7 +94,7 @@ namespace AppInstaller
             label15 = new Label();
             pictureBox12 = new PictureBox();
             Utilities = new TabPage();
-            tabPage1 = new TabPage();
+            Runtimes = new TabPage();
             pictureBox13 = new PictureBox();
             label32 = new Label();
             button25 = new Button();
@@ -125,7 +125,7 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            tabPage1.SuspendLayout();
+            Runtimes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
             Settings.SuspendLayout();
             SuspendLayout();
@@ -158,7 +158,7 @@ namespace AppInstaller
             TabControl.Controls.Add(ChatApps);
             TabControl.Controls.Add(Gaming);
             TabControl.Controls.Add(Utilities);
-            TabControl.Controls.Add(tabPage1);
+            TabControl.Controls.Add(Runtimes);
             TabControl.Controls.Add(Settings);
             TabControl.Location = new System.Drawing.Point(14, 70);
             TabControl.Margin = new Padding(4, 3, 4, 3);
@@ -873,19 +873,19 @@ namespace AppInstaller
             Utilities.Text = "Utilities";
             Utilities.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // Runtimes
             // 
-            tabPage1.Controls.Add(pictureBox13);
-            tabPage1.Controls.Add(label32);
-            tabPage1.Controls.Add(button25);
-            tabPage1.Controls.Add(button26);
-            tabPage1.Controls.Add(label33);
-            tabPage1.Location = new System.Drawing.Point(4, 24);
-            tabPage1.Name = "tabPage1";
-            tabPage1.Size = new System.Drawing.Size(1112, 686);
-            tabPage1.TabIndex = 5;
-            tabPage1.Text = "Runtimes";
-            tabPage1.UseVisualStyleBackColor = true;
+            Runtimes.Controls.Add(pictureBox13);
+            Runtimes.Controls.Add(label32);
+            Runtimes.Controls.Add(button25);
+            Runtimes.Controls.Add(button26);
+            Runtimes.Controls.Add(label33);
+            Runtimes.Location = new System.Drawing.Point(4, 24);
+            Runtimes.Name = "Runtimes";
+            Runtimes.Size = new System.Drawing.Size(1112, 686);
+            Runtimes.TabIndex = 5;
+            Runtimes.Text = "Runtimes";
+            Runtimes.UseVisualStyleBackColor = true;
             // 
             // pictureBox13
             // 
@@ -1097,8 +1097,8 @@ namespace AppInstaller
             ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
+            Runtimes.ResumeLayout(false);
+            Runtimes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             Settings.ResumeLayout(false);
             Settings.PerformLayout();
@@ -1181,7 +1181,7 @@ namespace AppInstaller
         private Label label28;
         private Label label27;
         private Label label31;
-        private TabPage tabPage1;
+        private TabPage Runtimes;
         private Label label32;
         private Button button25;
         private Button button26;

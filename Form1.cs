@@ -215,6 +215,12 @@ namespace AppInstaller
 
 
             }
+
+            string wingetpath = "C:\\Program Files\\WindowsApps\\Microsoft.DesktopAppInstaller_1.24.1792.0_x64__8wekyb3d8bbwe\\winget.exe";
+            if (!File.Exists(wingetpath))
+            {
+                MessageBox.Show("AppInstaller cannot find the winget executable. You are either using an operating system unsupported by winget, or the Desktop App Installer package isn't installed or needs to be updated. Please resolve the following issues before continuing.", "Critical error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
 
